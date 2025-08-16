@@ -15,6 +15,7 @@ import time
 from datetime import datetime
 from fields_extractor import extract_from_html
 from zoopla import scrape_to_json
+import config
 
 # The working headers with proper cookies for accessing full data
 SEARCH_HEADERS = {
@@ -53,10 +54,8 @@ PROPERTY_HEADERS = {
     "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
 }
 
-# Configuration
-MAX_PROPERTIES = 2  # Set to 2 for testing - change this to scrape more
-PAGES_TO_SCRAPE = 1  # Number of search result pages to process
-REQUEST_DELAY = 5  # Seconds between property requests
+# Configuration imported from config.py
+# You can modify settings in config.py instead of changing them here
 
 
 def extract_property_urls_from_response(response_text: str, page_number: int) -> list:
@@ -188,7 +187,7 @@ async def fetch_zoopla_page(page_number: int):
     print(f"\nFetching page {page_number}...")
 
     # Define the URL and parameters
-    base_url = "https://www.zoopla.co.uk/for-sale/property/greater-manchester/"
+    base_url = config.SEARCH_BASE_URL
     params = {
         "q": "Greater Manchester",
         "search_source": "for-sale",
@@ -210,8 +209,8 @@ async def fetch_zoopla_page(page_number: int):
             base_url,
             params=params,
             headers=headers,
-            impersonate="chrome",
-            timeout=20,
+            impersonate=config.IMPERSONATE_BROWSER,
+            timeout=config.REQUEST_TIMEOUT,
         )
 
         print(f"Status Code for page {page_number}: {response.status_code}")
@@ -257,15 +256,13 @@ async def fetch_property_details(property_data: dict):
         # Step 2: Fetch HTML with working headers for stations/schools extraction
         print(f"   🔄 Fetching HTML for stations/schools extraction...")
         working_headers = SEARCH_HEADERS.copy()
-        working_headers["Referer"] = (
-            "https://www.zoopla.co.uk/for-sale/property/greater-manchester/"
-        )
-
+        working_headers["Referer"] = config.SEARCH_BASE_URL
+        
         response = curl_cffi.get(
             property_url,
             headers=working_headers,
-            impersonate="chrome",
-            timeout=20,
+            impersonate=config.IMPERSONATE_BROWSER,
+            timeout=config.REQUEST_TIMEOUT,
         )
         html = response.text
         print(f"✅ Successfully fetched HTML with working headers")
@@ -301,17 +298,17 @@ async def main():
     """Main function to orchestrate the bulk scraping process."""
     print(f"🚀 Starting Zoopla Bulk Scraper")
     print(
-        f"📊 Configuration: {MAX_PROPERTIES} properties max, {PAGES_TO_SCRAPE} pages, {REQUEST_DELAY}s delay"
+        f"📊 Configuration: {config.MAX_PROPERTIES} properties max, {config.PAGES_TO_SCRAPE} pages, {config.REQUEST_DELAY}s delay"
     )
 
     all_properties = []
 
     # Fetch search results pages
-    for page in range(1, PAGES_TO_SCRAPE + 1):
+    for page in range(1, config.PAGES_TO_SCRAPE + 1):
         property_urls = await fetch_zoopla_page(page)
 
         # Limit properties based on configuration
-        available_slots = MAX_PROPERTIES - len(all_properties)
+        available_slots = config.MAX_PROPERTIES - len(all_properties)
         if available_slots <= 0:
             break
 
@@ -320,7 +317,7 @@ async def main():
 
         print(f"Added {len(limited_urls)} properties from page {page}")
 
-        if len(all_properties) >= MAX_PROPERTIES:
+        if len(all_properties) >= config.MAX_PROPERTIES:
             break
 
     print(f"\n📊 Total property URLs found: {len(all_properties)}")
@@ -337,13 +334,13 @@ async def main():
 
         # Add delay between requests (except for the last one)
         if i < len(all_properties) - 1:
-            print(f"⏳ Waiting {REQUEST_DELAY} seconds before next request...")
-            await asyncio.sleep(REQUEST_DELAY)
+            print(f"⏳ Waiting {config.REQUEST_DELAY} seconds before next request...")
+            await asyncio.sleep(config.REQUEST_DELAY)
 
     # Save all detailed properties to JSON file
     if detailed_properties:
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        filename = f"zoopla_bulk_properties_{timestamp}.json"
+        filename = f"{config.OUTPUT_FILE_PREFIX}_{timestamp}.json"
 
         with open(filename, "w", encoding="utf-8") as f:
             json.dump(detailed_properties, f, indent=2, ensure_ascii=False)
