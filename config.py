@@ -6,7 +6,7 @@ Modify these settings to customize the scraping behavior.
 """
 
 # ===== SCRAPING LIMITS =====
-MAX_PROPERTIES = 2  # Maximum number of properties to scrape (set to 2 for testing)
+MAX_PROPERTIES = "ALL"  # Set to "ALL" to scrape all available properties, or set to a number (e.g., 5)
 PAGES_TO_SCRAPE = 1  # Number of search result pages to process
 REQUEST_DELAY = 7  # Seconds to wait between property requests (be respectful!)
 
@@ -67,5 +67,5 @@ EXTRACT_ADDITIONAL_METADATA = True  # Extract extra fields like timestamps, sour
 
 # ===== EXPORT FORMATS =====
 EXPORT_TO_JSON = True  # Export results to JSON format
-EXPORT_TO_CSV = True  # Export results to CSV format
+EXPORT_TO_CSV = False  # Export results to CSV format
 PRETTY_PRINT_JSON = True  # Format JSON output for readability

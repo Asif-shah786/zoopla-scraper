@@ -230,13 +230,13 @@ async def fetch_zoopla_page(page_number: int):
 def extract_stations_schools_only(html: str, property_id: str) -> dict:
     """Extract ONLY stations and schools data using the working legacy patterns."""
     legacy_details = extract_property_details_legacy(html, property_id)
-    
+
     # Return only stations and schools fields
     stations_schools = {}
     for key in ["nearest_stations", "nearest_stations_distances", "nearest_schools"]:
         if key in legacy_details and legacy_details[key]:
             stations_schools[key] = legacy_details[key]
-    
+
     return stations_schools
 
 
@@ -244,23 +244,23 @@ def export_to_csv(properties_data: list, filename: str) -> None:
     """Export properties data to CSV format."""
     if not properties_data:
         return
-    
+
     # Get all unique field names from all properties
     all_fields = set()
     for prop in properties_data:
         all_fields.update(prop.keys())
-    
+
     # Sort fields for consistent column order
     sorted_fields = sorted(all_fields)
-    
+
     # Write CSV file
-    csv_filename = filename.replace('.json', '.csv')
-    with open(csv_filename, 'w', newline='', encoding='utf-8') as csvfile:
+    csv_filename = filename.replace(".json", ".csv")
+    with open(csv_filename, "w", newline="", encoding="utf-8") as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=sorted_fields)
-        
+
         # Write header
         writer.writeheader()
-        
+
         # Write data rows
         for prop in properties_data:
             # Clean data for CSV (handle multiline text)
@@ -268,13 +268,13 @@ def export_to_csv(properties_data: list, filename: str) -> None:
             for key, value in prop.items():
                 if isinstance(value, str):
                     # Replace newlines with semicolons for better CSV readability
-                    clean_value = value.replace('\n', '; ').replace('\r', '')
+                    clean_value = value.replace("\n", "; ").replace("\r", "")
                     clean_prop[key] = clean_value
                 else:
                     clean_prop[key] = value
-            
+
             writer.writerow(clean_prop)
-    
+
     print(f"📄 CSV export saved to: {csv_filename}")
 
 
@@ -339,9 +339,16 @@ async def main():
     start_time = datetime.now()
 
     print(f"🚀 Starting Zoopla Bulk Scraper")
-    print(
-        f"📊 Configuration: {config.MAX_PROPERTIES} properties max, {config.PAGES_TO_SCRAPE} pages, {config.REQUEST_DELAY}s delay"
-    )
+
+    # Display configuration in a user-friendly way
+    if config.MAX_PROPERTIES == "ALL":
+        print(
+            f"📊 Configuration: ALL available properties, {config.PAGES_TO_SCRAPE} pages, {config.REQUEST_DELAY}s delay"
+        )
+    else:
+        print(
+            f"📊 Configuration: {config.MAX_PROPERTIES} properties max, {config.PAGES_TO_SCRAPE} pages, {config.REQUEST_DELAY}s delay"
+        )
 
     all_properties = []
 
@@ -349,18 +356,27 @@ async def main():
     for page in range(1, config.PAGES_TO_SCRAPE + 1):
         property_urls = await fetch_zoopla_page(page)
 
-        # Limit properties based on configuration
-        available_slots = config.MAX_PROPERTIES - len(all_properties)
-        if available_slots <= 0:
-            break
+        if not property_urls:
+            print(f"No properties found on page {page}")
+            continue
 
-        limited_urls = property_urls[:available_slots]
-        all_properties.extend(limited_urls)
+        # Handle "ALL" vs numeric limit
+        if config.MAX_PROPERTIES == "ALL":
+            # Scrape all available properties from this page
+            all_properties.extend(property_urls)
+            print(f"Added ALL {len(property_urls)} properties from page {page}")
+        else:
+            # Limit properties based on numeric configuration
+            available_slots = config.MAX_PROPERTIES - len(all_properties)
+            if available_slots <= 0:
+                break
 
-        print(f"Added {len(limited_urls)} properties from page {page}")
+            limited_urls = property_urls[:available_slots]
+            all_properties.extend(limited_urls)
+            print(f"Added {len(limited_urls)} properties from page {page}")
 
-        if len(all_properties) >= config.MAX_PROPERTIES:
-            break
+            if len(all_properties) >= config.MAX_PROPERTIES:
+                break
 
     print(f"\n📊 Total property URLs found: {len(all_properties)}")
 
@@ -416,7 +432,7 @@ async def main():
             with open(filename, "w", encoding="utf-8") as f:
                 json.dump(detailed_properties, f, indent=2, ensure_ascii=False)
             print(f"\n✅ JSON export saved to: {filename}")
-        
+
         # Export to CSV
         if config.EXPORT_TO_CSV:
             export_to_csv(detailed_properties, filename)
