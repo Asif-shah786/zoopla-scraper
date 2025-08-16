@@ -257,7 +257,7 @@ async def fetch_property_details(property_data: dict):
         print(f"   🔄 Fetching HTML for stations/schools extraction...")
         working_headers = SEARCH_HEADERS.copy()
         working_headers["Referer"] = config.SEARCH_BASE_URL
-        
+
         response = curl_cffi.get(
             property_url,
             headers=working_headers,
@@ -296,6 +296,9 @@ async def fetch_property_details(property_data: dict):
 
 async def main():
     """Main function to orchestrate the bulk scraping process."""
+    # Record start time for filename
+    start_time = datetime.now()
+
     print(f"🚀 Starting Zoopla Bulk Scraper")
     print(
         f"📊 Configuration: {config.MAX_PROPERTIES} properties max, {config.PAGES_TO_SCRAPE} pages, {config.REQUEST_DELAY}s delay"
@@ -339,8 +342,35 @@ async def main():
 
     # Save all detailed properties to JSON file
     if detailed_properties:
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        filename = f"{config.OUTPUT_FILE_PREFIX}_{timestamp}.json"
+        # Record end time for filename
+        end_time = datetime.now()
+
+        # Generate meaningful filename with scraping session details
+        total_properties = len(detailed_properties)
+        pages_scraped = config.PAGES_TO_SCRAPE
+
+        # Format: day-month-startTime-endTime_pageStart-pageEnd_propertyStart-propertyEnd.json
+        day = start_time.strftime("%d")
+        month = start_time.strftime("%B").lower()  # e.g., "july"
+        start_hour = start_time.strftime("%-I%p").lower()  # e.g., "7pm"
+        end_hour = end_time.strftime("%-I%p").lower()  # e.g., "8pm"
+
+        # Page range
+        if pages_scraped == 1:
+            page_range = "page1"
+        else:
+            page_range = f"page1-{pages_scraped}"
+
+        # Property range
+        if total_properties == 1:
+            property_range = "property1"
+        else:
+            property_range = f"property1-{total_properties}"
+
+        # Create descriptive filename
+        filename = (
+            f"{day}-{month}-{start_hour}-{end_hour}_{page_range}_{property_range}.json"
+        )
 
         with open(filename, "w", encoding="utf-8") as f:
             json.dump(detailed_properties, f, indent=2, ensure_ascii=False)

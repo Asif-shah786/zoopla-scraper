@@ -6,8 +6,8 @@ Modify these settings to customize the scraping behavior.
 """
 
 # ===== SCRAPING LIMITS =====
-MAX_PROPERTIES = 2  # Maximum number of properties to scrape (set to 2 for testing)
-PAGES_TO_SCRAPE = 1  # Number of search result pages to process
+MAX_PROPERTIES = 3  # Maximum number of properties to scrape (set to 2 for testing)
+PAGES_TO_SCRAPE = 2  # Number of search result pages to process
 REQUEST_DELAY = 5  # Seconds to wait between property requests (be respectful!)
 
 # ===== SEARCH CONFIGURATION =====
@@ -49,12 +49,20 @@ CONCURRENT_REQUESTS = 1  # Number of simultaneous requests (keep at 1 to be resp
 # ===== DATA VALIDATION =====
 VALIDATE_PROPERTY_IDS = True  # Validate property ID format
 SKIP_DUPLICATE_PROPERTIES = True  # Skip properties already processed
-MINIMUM_REQUIRED_FIELDS = ["property_id", "property_url", "price"]  # Required fields for valid properties
+MINIMUM_REQUIRED_FIELDS = [
+    "property_id",
+    "property_url",
+    "price",
+]  # Required fields for valid properties
 
 # ===== ADVANCED SETTINGS =====
 # Note: Modify these only if you know what you're doing
-ENABLE_LEGACY_EXTRACTION = True  # Use legacy patterns for stations/schools (recommended)
-USE_WORKING_HEADERS = True  # Use authenticated headers for better data access (recommended)
+ENABLE_LEGACY_EXTRACTION = (
+    True  # Use legacy patterns for stations/schools (recommended)
+)
+USE_WORKING_HEADERS = (
+    True  # Use authenticated headers for better data access (recommended)
+)
 EXTRACT_ADDITIONAL_METADATA = True  # Extract extra fields like timestamps, source info
 
 # ===== EXPORT FORMATS =====
