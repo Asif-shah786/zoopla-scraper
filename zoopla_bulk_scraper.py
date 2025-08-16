@@ -278,6 +278,38 @@ def export_to_csv(properties_data: list, filename: str) -> None:
     print(f"📄 CSV export saved to: {csv_filename}")
 
 
+async def save_progress_incrementally(
+    properties_data: list, start_time: datetime, current_count: int, total_count: int
+) -> None:
+    """Save progress incrementally to prevent data loss."""
+    if not properties_data:
+        return
+
+    try:
+        # Create single progress filename for the entire run
+        day = start_time.strftime("%d")
+        month = start_time.strftime("%B").lower()
+        start_hour = start_time.strftime("%-I%p").lower()
+
+        # Single progress file that gets updated throughout the run
+        progress_filename = f"progress_{day}-{month}-{start_hour}_run.json"
+
+        # Save current progress (overwrites previous version)
+        with open(progress_filename, "w", encoding="utf-8") as f:
+            json.dump(properties_data, f, indent=2, ensure_ascii=False)
+
+        # Also save CSV if enabled (overwrites previous version)
+        if config.EXPORT_TO_CSV:
+            csv_filename = progress_filename.replace(".json", ".csv")
+            export_to_csv(properties_data, csv_filename)
+
+        print(f"💾 Progress updated: {current_count}/{total_count} properties")
+
+    except Exception as e:
+        print(f"⚠️ Warning: Could not save progress: {e}")
+        # Don't fail the main process if progress saving fails
+
+
 async def fetch_property_details(property_data: dict):
     """Fetches detailed information using complete zoopla.py function + append stations/schools."""
     property_id = property_data["property_id"]
@@ -341,9 +373,17 @@ async def main():
     print(f"🚀 Starting Zoopla Bulk Scraper")
 
     # Display configuration in a user-friendly way
-    if config.MAX_PROPERTIES == "ALL":
+    if config.MAX_PROPERTIES == "ALL" and config.PAGES_TO_SCRAPE == "ALL":
+        print(
+            f"📊 Configuration: ALL available properties from ALL available pages, {config.REQUEST_DELAY}s delay"
+        )
+    elif config.MAX_PROPERTIES == "ALL":
         print(
             f"📊 Configuration: ALL available properties, {config.PAGES_TO_SCRAPE} pages, {config.REQUEST_DELAY}s delay"
+        )
+    elif config.PAGES_TO_SCRAPE == "ALL":
+        print(
+            f"📊 Configuration: {config.MAX_PROPERTIES} properties max, ALL available pages, {config.REQUEST_DELAY}s delay"
         )
     else:
         print(
@@ -352,43 +392,127 @@ async def main():
 
     all_properties = []
 
-    # Fetch search results pages
-    for page in range(1, config.PAGES_TO_SCRAPE + 1):
-        property_urls = await fetch_zoopla_page(page)
+    # Determine how many pages to scrape
+    if config.PAGES_TO_SCRAPE == "ALL":
+        # Auto-detect available pages by checking page 1 first
+        print("🔄 Auto-detecting available pages...")
+        page = 1
+        max_pages = 1  # Start with 1, will expand as we find more
 
-        if not property_urls:
-            print(f"No properties found on page {page}")
-            continue
+        while True:
+            property_urls = await fetch_zoopla_page(page)
 
-        # Handle "ALL" vs numeric limit
-        if config.MAX_PROPERTIES == "ALL":
-            # Scrape all available properties from this page
-            all_properties.extend(property_urls)
-            print(f"Added ALL {len(property_urls)} properties from page {page}")
-        else:
-            # Limit properties based on numeric configuration
-            available_slots = config.MAX_PROPERTIES - len(all_properties)
-            if available_slots <= 0:
+            if not property_urls:
+                print(f"No properties found on page {page}, stopping page detection")
                 break
 
-            limited_urls = property_urls[:available_slots]
-            all_properties.extend(limited_urls)
-            print(f"Added {len(limited_urls)} properties from page {page}")
+            # Add properties from this page
+            if config.MAX_PROPERTIES == "ALL":
+                all_properties.extend(property_urls)
+                print(f"Added ALL {len(property_urls)} properties from page {page}")
+            else:
+                available_slots = config.MAX_PROPERTIES - len(all_properties)
+                if available_slots <= 0:
+                    break
 
-            if len(all_properties) >= config.MAX_PROPERTIES:
+                limited_urls = property_urls[:available_slots]
+                all_properties.extend(limited_urls)
+                print(f"Added {len(limited_urls)} properties from page {page}")
+
+                if len(all_properties) >= config.MAX_PROPERTIES:
+                    break
+
+            # Always check the next page unless we get 0 properties
+            if len(property_urls) > 0:
+                page += 1
+                max_pages = page
+                print(
+                    f"📄 Page {page-1} had {len(property_urls)} properties, checking page {page}..."
+                )
+            else:
+                print(f"📄 Page {page} had no properties, stopping page detection")
                 break
+
+    else:
+        # Use numeric page limit
+        for page in range(1, config.PAGES_TO_SCRAPE + 1):
+            property_urls = await fetch_zoopla_page(page)
+
+            if not property_urls:
+                print(f"No properties found on page {page}")
+                continue
+
+            # Handle "ALL" vs numeric limit
+            if config.MAX_PROPERTIES == "ALL":
+                # Scrape all available properties from this page
+                all_properties.extend(property_urls)
+                print(f"Added ALL {len(property_urls)} properties from page {page}")
+            else:
+                # Limit properties based on numeric configuration
+                available_slots = config.MAX_PROPERTIES - len(all_properties)
+                if available_slots <= 0:
+                    break
+
+                limited_urls = property_urls[:available_slots]
+                all_properties.extend(limited_urls)
+                print(f"Added {len(limited_urls)} properties from page {page}")
+
+                if len(all_properties) >= config.MAX_PROPERTIES:
+                    break
 
     print(f"\n📊 Total property URLs found: {len(all_properties)}")
 
     # Now fetch detailed information for each property
     detailed_properties = []
+    successful_count = 0
+    failed_count = 0
+    failed_properties = []
 
     for i, property_data in enumerate(all_properties):
         print(f"\n--- Processing property {i+1}/{len(all_properties)} ---")
 
-        # Fetch property details using hybrid approach
-        detailed_property = await fetch_property_details(property_data)
-        detailed_properties.append(detailed_property)
+        try:
+            # Fetch property details using hybrid approach
+            detailed_property = await fetch_property_details(property_data)
+
+            if detailed_property and detailed_property.get("property_id"):
+                detailed_properties.append(detailed_property)
+                successful_count += 1
+
+                # Save progress incrementally after each successful property
+                await save_progress_incrementally(
+                    detailed_properties, start_time, i + 1, len(all_properties)
+                )
+
+                print(f"✅ Successfully processed property {i+1}/{len(all_properties)}")
+            else:
+                failed_count += 1
+                failed_properties.append(
+                    {
+                        "property_id": property_data.get("property_id", "unknown"),
+                        "url": property_data.get("property_url", "unknown"),
+                        "error": "No data extracted",
+                        "attempt": i + 1,
+                    }
+                )
+                print(
+                    f"❌ Failed to extract data for property {i+1}/{len(all_properties)}"
+                )
+
+        except Exception as e:
+            failed_count += 1
+            failed_properties.append(
+                {
+                    "property_id": property_data.get("property_id", "unknown"),
+                    "url": property_data.get("property_url", "unknown"),
+                    "error": str(e),
+                    "attempt": i + 1,
+                }
+            )
+            print(f"❌ Error processing property {i+1}/{len(all_properties)}: {e}")
+
+            # Continue with next property instead of crashing
+            continue
 
         # Add delay between requests (except for the last one)
         if i < len(all_properties) - 1:
@@ -423,9 +547,7 @@ async def main():
             property_range = f"property1-{total_properties}"
 
         # Create descriptive filename
-        filename = (
-            f"{day}-{month}-{start_hour}-{end_hour}_{page_range}_{property_range}.json"
-        )
+        filename = f"{day}-{month}-{start_hour}_{page_range}_{property_range}.json"
 
         # Export to JSON
         if config.EXPORT_TO_JSON:
@@ -444,12 +566,24 @@ async def main():
             1 for p in detailed_properties if p.get("nearest_stations")
         )
         schools_count = sum(1 for p in detailed_properties if p.get("nearest_schools"))
+
+        print(f"\n📊 Final Summary:")
+        print(f"   ✅ Successfully processed: {successful_count} properties")
+        print(f"   ❌ Failed to process: {failed_count} properties")
         print(
-            f"📍 Properties with station data: {stations_count}/{len(detailed_properties)}"
+            f"   📍 Properties with station data: {stations_count}/{len(detailed_properties)}"
         )
         print(
-            f"🏫 Properties with school data: {schools_count}/{len(detailed_properties)}"
+            f"   🏫 Properties with school data: {schools_count}/{len(detailed_properties)}"
         )
+
+        # Save error log if there were failures
+        if failed_properties:
+            error_log_filename = f"error_log_{day}-{month}-{start_hour}-{end_hour}.json"
+            with open(error_log_filename, "w", encoding="utf-8") as f:
+                json.dump(failed_properties, f, indent=2, ensure_ascii=False)
+            print(f"   📝 Error log saved to: {error_log_filename}")
+
     else:
         print("\n❌ No properties were processed")
 

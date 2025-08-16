@@ -7,7 +7,7 @@ Modify these settings to customize the scraping behavior.
 
 # ===== SCRAPING LIMITS =====
 MAX_PROPERTIES = "ALL"  # Set to "ALL" to scrape all available properties, or set to a number (e.g., 5)
-PAGES_TO_SCRAPE = 1  # Number of search result pages to process
+PAGES_TO_SCRAPE = "ALL"
 REQUEST_DELAY = 7  # Seconds to wait between property requests (be respectful!)
 
 # ===== SEARCH CONFIGURATION =====
@@ -69,3 +69,13 @@ EXTRACT_ADDITIONAL_METADATA = True  # Extract extra fields like timestamps, sour
 EXPORT_TO_JSON = True  # Export results to JSON format
 EXPORT_TO_CSV = False  # Export results to CSV format
 PRETTY_PRINT_JSON = True  # Format JSON output for readability
+
+# ===== ERROR HANDLING & RECOVERY =====
+SAVE_PROGRESS_INCREMENTALLY = (
+    True  # Save progress after each property (prevents data loss)
+)
+CONTINUE_ON_ERROR = True  # Continue processing other properties if one fails
+SAVE_ERROR_LOGS = True  # Save detailed error logs for failed properties
+MAX_RETRIES_PER_PROPERTY = (
+    1  # Number of retry attempts per property before marking as failed
+)
