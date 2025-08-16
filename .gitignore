@@ -48,6 +48,24 @@ raw*.html
 out*.json
 *.html
 
+# Scraped data files
+*-august-*.json
+*-july-*.json
+*-september-*.json
+*-october-*.json
+*-november-*.json
+*-december-*.json
+*-january-*.json
+*-february-*.json
+*-march-*.json
+*-april-*.json
+*-may-*.json
+*-june-*.json
+
+# Progress files
+progress_*.json
+progress_*.csv
+
 # Temporary files
 temp/
 tmp/
