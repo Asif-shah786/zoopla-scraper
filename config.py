@@ -6,9 +6,9 @@ Modify these settings to customize the scraping behavior.
 """
 
 # ===== SCRAPING LIMITS =====
-MAX_PROPERTIES = 3  # Maximum number of properties to scrape (set to 2 for testing)
-PAGES_TO_SCRAPE = 2  # Number of search result pages to process
-REQUEST_DELAY = 5  # Seconds to wait between property requests (be respectful!)
+MAX_PROPERTIES = 2  # Maximum number of properties to scrape (set to 2 for testing)
+PAGES_TO_SCRAPE = 1  # Number of search result pages to process
+REQUEST_DELAY = 7  # Seconds to wait between property requests (be respectful!)
 
 # ===== SEARCH CONFIGURATION =====
 SEARCH_LOCATION = "greater-manchester"  # Location to search for properties
@@ -67,5 +67,5 @@ EXTRACT_ADDITIONAL_METADATA = True  # Extract extra fields like timestamps, sour
 
 # ===== EXPORT FORMATS =====
 EXPORT_TO_JSON = True  # Export results to JSON format
-EXPORT_TO_CSV = False  # Export results to CSV format (future feature)
+EXPORT_TO_CSV = True  # Export results to CSV format
 PRETTY_PRINT_JSON = True  # Format JSON output for readability

@@ -45,6 +45,7 @@ SEARCH_LOCATION = "greater-manchester"  # Location to search
 ### Advanced Settings:
 - **Timeouts**: Request and page load timeouts
 - **Output**: File naming and directory settings
+- **Export Formats**: Enable/disable JSON and CSV exports
 - **Debugging**: Verbose logging and debug modes
 - **Data Extraction**: Enable/disable specific fields
 - **Rate Limiting**: Respectful scraping settings
@@ -74,6 +75,10 @@ python zoopla.py --url "https://www.zoopla.co.uk/for-sale/details/PROPERTY_ID/" 
 - `--out`: Output JSON file (optional, prints to stdout if omitted)
 
 ## 📊 Output Data
+
+### Output Formats:
+- **JSON**: Structured data with full field details (default)
+- **CSV**: Spreadsheet-friendly format for analysis and reporting
 
 ### Extracted Fields:
 - **Basic Info**: Price, property type, bedrooms, bathrooms, receptions

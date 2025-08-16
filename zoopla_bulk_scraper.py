@@ -12,6 +12,7 @@ import asyncio
 import json
 import re
 import time
+import csv
 from datetime import datetime
 from fields_extractor import extract_from_html
 from zoopla import scrape_to_json
@@ -229,14 +230,52 @@ async def fetch_zoopla_page(page_number: int):
 def extract_stations_schools_only(html: str, property_id: str) -> dict:
     """Extract ONLY stations and schools data using the working legacy patterns."""
     legacy_details = extract_property_details_legacy(html, property_id)
-
+    
     # Return only stations and schools fields
     stations_schools = {}
     for key in ["nearest_stations", "nearest_stations_distances", "nearest_schools"]:
         if key in legacy_details and legacy_details[key]:
             stations_schools[key] = legacy_details[key]
-
+    
     return stations_schools
+
+
+def export_to_csv(properties_data: list, filename: str) -> None:
+    """Export properties data to CSV format."""
+    if not properties_data:
+        return
+    
+    # Get all unique field names from all properties
+    all_fields = set()
+    for prop in properties_data:
+        all_fields.update(prop.keys())
+    
+    # Sort fields for consistent column order
+    sorted_fields = sorted(all_fields)
+    
+    # Write CSV file
+    csv_filename = filename.replace('.json', '.csv')
+    with open(csv_filename, 'w', newline='', encoding='utf-8') as csvfile:
+        writer = csv.DictWriter(csvfile, fieldnames=sorted_fields)
+        
+        # Write header
+        writer.writeheader()
+        
+        # Write data rows
+        for prop in properties_data:
+            # Clean data for CSV (handle multiline text)
+            clean_prop = {}
+            for key, value in prop.items():
+                if isinstance(value, str):
+                    # Replace newlines with semicolons for better CSV readability
+                    clean_value = value.replace('\n', '; ').replace('\r', '')
+                    clean_prop[key] = clean_value
+                else:
+                    clean_prop[key] = value
+            
+            writer.writerow(clean_prop)
+    
+    print(f"📄 CSV export saved to: {csv_filename}")
 
 
 async def fetch_property_details(property_data: dict):
@@ -372,12 +411,16 @@ async def main():
             f"{day}-{month}-{start_hour}-{end_hour}_{page_range}_{property_range}.json"
         )
 
-        with open(filename, "w", encoding="utf-8") as f:
-            json.dump(detailed_properties, f, indent=2, ensure_ascii=False)
+        # Export to JSON
+        if config.EXPORT_TO_JSON:
+            with open(filename, "w", encoding="utf-8") as f:
+                json.dump(detailed_properties, f, indent=2, ensure_ascii=False)
+            print(f"\n✅ JSON export saved to: {filename}")
+        
+        # Export to CSV
+        if config.EXPORT_TO_CSV:
+            export_to_csv(detailed_properties, filename)
 
-        print(
-            f"\n✅ Saved {len(detailed_properties)} detailed properties to {filename}"
-        )
         print(f"📊 Total properties processed: {len(detailed_properties)}")
 
         # Summary stats
