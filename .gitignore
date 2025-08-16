@@ -1,0 +1,53 @@
+# Virtual Environment
+venv/
+env/
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Output files (keep examples but ignore new ones)
+zoopla_detailed_properties_*.json
+zoopla_bulk_properties_*.json
+sample_*.json
+test_*.json
+debug*.json
+raw*.html
+out*.json
+*.html
+
+# Temporary files
+temp/
+tmp/
