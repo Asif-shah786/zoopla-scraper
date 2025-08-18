@@ -1,0 +1,339 @@
+[
+  {
+    "address": "New Barton Street, Salford, M6 7WW, United Kingdom",
+    "postcode": "M6 7WW",
+    "lat": 53.500113,
+    "lng": -2.312317,
+    "summary": "🟢 New Barton Street, Salford, M6 7WW, United Kingdom (M6 7WW): Low crime - 1 incidents within 1.0km radius (near On or near Crosby Road), mainly Other Theft (falling trend)",
+    "aggregate": {
+      "total": 1,
+      "by_category": {
+        "other-theft": 1
+      },
+      "top_streets": {
+        "On or near Crosby Road": 1
+      },
+      "outcomes": {
+        "Action to be taken by another organisation": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 1
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Shergar Way, Salford, M6 6NQ, United Kingdom",
+    "postcode": "M6 6NQ",
+    "lat": 53.499433,
+    "lng": -2.276557,
+    "summary": "🟢 Shergar Way, Salford, M6 6NQ, United Kingdom (M6 6NQ): Low crime - 3 incidents within 1.0km radius (near On or near Kersal Bank, On or near Elton's Yard), mainly Violent Crime (falling trend)",
+    "aggregate": {
+      "total": 3,
+      "by_category": {
+        "violent-crime": 3
+      },
+      "top_streets": {
+        "On or near Kersal Bank": 1,
+        "On or near Elton's Yard": 1,
+        "On or near Croft Street": 1
+      },
+      "outcomes": {
+        "Under investigation": 2,
+        "Unable to prosecute suspect": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 2,
+        "2025-04": 1,
+        "2025-03": 0
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Manchester, SLF, ENG, United Kingdom",
+    "postcode": "O L12",
+    "lat": 53.471419,
+    "lng": -2.244834,
+    "summary": "🟡 Manchester, SLF, ENG, United Kingdom (O L12): Moderate crime - 7 incidents within 1.0km radius (near On or near Wood Street, On or near Ormsgill Street), mainly Violent Crime, Criminal Damage Arson (falling trend)",
+    "aggregate": {
+      "total": 7,
+      "by_category": {
+        "violent-crime": 5,
+        "criminal-damage-arson": 1,
+        "other-theft": 1
+      },
+      "top_streets": {
+        "On or near Wood Street": 3,
+        "On or near Ormsgill Street": 1,
+        "On or near Left Bank": 1
+      },
+      "outcomes": {
+        "Investigation complete; no suspect identified": 4,
+        "Under investigation": 3
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 2,
+        "2025-05": 3,
+        "2025-04": 1,
+        "2025-03": 1
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Goldhawk Road, London, W12 8EG, United Kingdom",
+    "postcode": "W12 8EG",
+    "lat": 51.5017564,
+    "lng": -0.2265662,
+    "summary": "🔴 Goldhawk Road, London, W12 8EG, United Kingdom (W12 8EG): High crime area - 6268 incidents within 1.0km radius (near On or near Shopping Area, On or near Supermarket), mainly Violent Crime, Anti Social Behaviour (falling trend)",
+    "aggregate": {
+      "total": 6268,
+      "by_category": {
+        "violent-crime": 1445,
+        "anti-social-behaviour": 1374,
+        "shoplifting": 815,
+        "other-theft": 500,
+        "public-order": 355,
+        "vehicle-crime": 355,
+        "drugs": 293,
+        "theft-from-the-person": 286,
+        "criminal-damage-arson": 266,
+        "burglary": 221,
+        "robbery": 157,
+        "bicycle-theft": 116,
+        "other-crime": 52,
+        "possession-of-weapons": 33
+      },
+      "top_streets": {
+        "On or near Shopping Area": 390,
+        "On or near Supermarket": 358,
+        "On or near Parking Area": 347
+      },
+      "outcomes": {
+        "Under investigation": 2456,
+        "Investigation complete; no suspect identified": 1668,
+        "Not provided": 1374,
+        "Unable to prosecute suspect": 528,
+        "Awaiting court outcome": 183,
+        "Local resolution": 47,
+        "Action to be taken by another organisation": 4,
+        "Offender given a caution": 3,
+        "Further investigation is not in the public interest": 2,
+        "Formal action is not in the public interest": 2,
+        "Offender given penalty notice": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 1619,
+        "2025-05": 1602,
+        "2025-04": 1505,
+        "2025-03": 1542
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Laburnum Street, Salford, M6 5LZ, United Kingdom",
+    "postcode": "M6 5LZ",
+    "lat": 53.48563,
+    "lng": -2.29349,
+    "summary": "🟢 Laburnum Street, Salford, M6 5LZ, United Kingdom (M6 5LZ): Low crime - 2 incidents within 1.0km radius (near On or near Anchorage Quay, On or near Carolina Way), mainly Violent Crime (falling trend)",
+    "aggregate": {
+      "total": 2,
+      "by_category": {
+        "violent-crime": 2
+      },
+      "top_streets": {
+        "On or near Anchorage Quay": 1,
+        "On or near Carolina Way": 1
+      },
+      "outcomes": {
+        "Under investigation": 2
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 1,
+        "2025-04": 0,
+        "2025-03": 1
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Chisholm Close, Wigan, WN6 0QP, United Kingdom",
+    "postcode": "WN6 0QP",
+    "lat": 53.593567,
+    "lng": -2.685102,
+    "summary": "🟡 Chisholm Close, Wigan, WN6 0QP, United Kingdom (WN6 0QP): Moderate crime - 10 incidents within 1.0km radius (near On or near Mossy Lea Road, On or near Shopping Area), mainly Anti Social Behaviour, Criminal Damage Arson (falling trend)",
+    "aggregate": {
+      "total": 10,
+      "by_category": {
+        "anti-social-behaviour": 3,
+        "criminal-damage-arson": 2,
+        "vehicle-crime": 1,
+        "violent-crime": 1,
+        "other-theft": 1,
+        "drugs": 1,
+        "possession-of-weapons": 1
+      },
+      "top_streets": {
+        "On or near Mossy Lea Road": 4,
+        "On or near Shopping Area": 2,
+        "On or near Almond Brook Road": 2
+      },
+      "outcomes": {
+        "Unable to prosecute suspect": 3,
+        "Not provided": 3,
+        "Under investigation": 2,
+        "Investigation complete; no suspect identified": 1,
+        "Local resolution": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 2,
+        "2025-05": 3,
+        "2025-04": 3,
+        "2025-03": 2
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Bolton Road, Radcliffe, M26 3GP, United Kingdom",
+    "postcode": "M26 3GP",
+    "lat": 53.56278578424902,
+    "lng": -2.344623460870279,
+    "summary": "🟢 Bolton Road, Radcliffe, M26 3GP, United Kingdom (M26 3GP): Low crime - 2 incidents within 1.0km radius (near On or near Parking Area, On or near Wilson Street), mainly Vehicle Crime, Violent Crime (stable trend)",
+    "aggregate": {
+      "total": 2,
+      "by_category": {
+        "vehicle-crime": 1,
+        "violent-crime": 1
+      },
+      "top_streets": {
+        "On or near Parking Area": 1,
+        "On or near Wilson Street": 1
+      },
+      "outcomes": {
+        "Under investigation": 2
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 2,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 0
+      },
+      "trend": "stable"
+    }
+  },
+  {
+    "address": "Reservoir Street, Salford, M6 5ND, United Kingdom",
+    "postcode": "M6 5ND",
+    "lat": 53.485673,
+    "lng": -2.292342,
+    "summary": "🟢 Reservoir Street, Salford, M6 5ND, United Kingdom (M6 5ND): Low crime - 2 incidents within 1.0km radius (near On or near Anchorage Quay, On or near Carolina Way), mainly Violent Crime (falling trend)",
+    "aggregate": {
+      "total": 2,
+      "by_category": {
+        "violent-crime": 2
+      },
+      "top_streets": {
+        "On or near Anchorage Quay": 1,
+        "On or near Carolina Way": 1
+      },
+      "outcomes": {
+        "Under investigation": 2
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 1,
+        "2025-04": 0,
+        "2025-03": 1
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Cassidy Close, Manchester, M4 5FP, United Kingdom",
+    "postcode": "M4 5FP",
+    "lat": 53.486748,
+    "lng": -2.229995,
+    "summary": "🟡 Cassidy Close, Manchester, M4 5FP, United Kingdom (M4 5FP): Moderate crime - 9 incidents within 1.0km radius (near On or near Wood Street, On or near Southall Street), mainly Violent Crime, Other Theft (falling trend)",
+    "aggregate": {
+      "total": 9,
+      "by_category": {
+        "violent-crime": 7,
+        "other-theft": 1,
+        "theft-from-the-person": 1
+      },
+      "top_streets": {
+        "On or near Wood Street": 3,
+        "On or near Southall Street": 1,
+        "On or near Butler Lane": 1
+      },
+      "outcomes": {
+        "Under investigation": 7,
+        "Investigation complete; no suspect identified": 2
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 3,
+        "2025-05": 2,
+        "2025-04": 2,
+        "2025-03": 2
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Windmill Avenue, Salford, M5 3NF, United Kingdom",
+    "postcode": "M5 3NF",
+    "lat": 53.472483,
+    "lng": -2.273642,
+    "summary": "🟢 Windmill Avenue, Salford, M5 3NF, United Kingdom (M5 3NF): Low crime - 3 incidents within 1.0km radius (near On or near Archie Street, On or near Anchorage Quay), mainly Violent Crime (falling trend)",
+    "aggregate": {
+      "total": 3,
+      "by_category": {
+        "violent-crime": 3
+      },
+      "top_streets": {
+        "On or near Archie Street": 1,
+        "On or near Anchorage Quay": 1,
+        "On or near Clippers Quay": 1
+      },
+      "outcomes": {
+        "Under investigation": 2,
+        "Unable to prosecute suspect": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 1,
+        "2025-05": 1,
+        "2025-04": 1,
+        "2025-03": 0
+      },
+      "trend": "falling"
+    }
+  }
+]

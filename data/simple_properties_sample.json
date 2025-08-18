@@ -1,0 +1,130 @@
+{
+    "total_properties": 5,
+    "source": "zoopla_properties_august_mini_100_with_geo_cleaned.csv",
+    "properties": [
+        {
+            "id": 1,
+            "title": "3 bed terraced house for sale New Barton Street, Salford M6",
+            "address": "New Barton Street, Salford, M6 7WW, United Kingdom",
+            "price": 220000,
+            "property_type": "terraced",
+            "bedrooms": 3,
+            "bathrooms": 1,
+            "receptions": 2,
+            "tenure": "freehold",
+            "status": "Just added",
+            "location": {
+                "latitude": 53.500113,
+                "longitude": -2.312317,
+                "postcode": "M6 7WW",
+                "city": "Salford",
+                "county": "Salford"
+            },
+            "details": {
+                "size_sqft": 1044.0,
+                "price_per_sqft": 211.0,
+                "council_tax_band": "A",
+                "agent": "Hills"
+            }
+        },
+        {
+            "id": 2,
+            "title": "3 bed detached house for sale Shergar Way, Salford M6",
+            "address": "Shergar Way, Salford, M6 6NQ, United Kingdom",
+            "price": 430000,
+            "property_type": "detached",
+            "bedrooms": 3,
+            "bathrooms": 3,
+            "receptions": 1,
+            "tenure": "freehold",
+            "status": "Just added",
+            "location": {
+                "latitude": 53.499433,
+                "longitude": -2.276557,
+                "postcode": "M6 6NQ",
+                "city": "Salford",
+                "county": "Salford"
+            },
+            "details": {
+                "size_sqft": null,
+                "price_per_sqft": null,
+                "council_tax_band": "D",
+                "agent": "Hills"
+            }
+        },
+        {
+            "id": 3,
+            "title": "1 bed flat for sale No 1 Old Trafford, 4 Wharf End, Manchester M17",
+            "address": "Manchester, SLF, ENG, United Kingdom",
+            "price": 190000,
+            "property_type": "flat",
+            "bedrooms": 1,
+            "bathrooms": 1,
+            "receptions": 2,
+            "tenure": "leasehold",
+            "status": "Just added",
+            "location": {
+                "latitude": 53.471419,
+                "longitude": -2.244834,
+                "postcode": "O L12",
+                "city": "Manchester",
+                "county": "Salford"
+            },
+            "details": {
+                "size_sqft": null,
+                "price_per_sqft": null,
+                "council_tax_band": "A",
+                "agent": "Complete Prime Residential Ltd"
+            }
+        },
+        {
+            "id": 4,
+            "title": "2 bed terraced house for sale Bradgreen Road, Eccles M30",
+            "address": "Goldhawk Road, London, W12 8EG, United Kingdom",
+            "price": 250000,
+            "property_type": "terraced",
+            "bedrooms": 2,
+            "bathrooms": 1,
+            "receptions": 1,
+            "tenure": "freehold",
+            "status": "Just added",
+            "location": {
+                "latitude": 51.5017564,
+                "longitude": -0.2265662,
+                "postcode": "W12 8EG",
+                "city": "London",
+                "county": "Greater London"
+            },
+            "details": {
+                "size_sqft": 581.0,
+                "price_per_sqft": 430.0,
+                "council_tax_band": "C",
+                "agent": "Hills"
+            }
+        },
+        {
+            "id": 5,
+            "title": "2 bed terraced house for sale Laburnum Street, Salford M6",
+            "address": "Laburnum Street, Salford, M6 5LZ, United Kingdom",
+            "price": 200000,
+            "property_type": "terraced",
+            "bedrooms": 2,
+            "bathrooms": 1,
+            "receptions": 1,
+            "tenure": "leasehold",
+            "status": "Just added",
+            "location": {
+                "latitude": 53.48563,
+                "longitude": -2.29349,
+                "postcode": "M6 5LZ",
+                "city": "Salford",
+                "county": "Salford"
+            },
+            "details": {
+                "size_sqft": 635.0,
+                "price_per_sqft": 315.0,
+                "council_tax_band": "A",
+                "agent": "Hills"
+            }
+        }
+    

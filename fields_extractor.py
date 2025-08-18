@@ -1,6 +1,7 @@
 import re
 import json
 from typing import Dict, Any, Optional, List
+from curl_cffi import requests
 
 # --------- Helpers ---------
 
@@ -416,3 +417,154 @@ def extract_from_html(html: str, visible_text: Optional[str] = None) -> Dict[str
 
     # Remove empties
     return {k: v for k, v in out.items() if v not in (None, "", [], {})}
+
+
+# --------- GraphQL API Functions for Points of Interest ---------
+
+
+def fetch_points_of_interest_graphql(
+    longitude: float, latitude: float, limit: int = 8
+) -> Optional[Dict[str, Any]]:
+    """
+    Fetch points of interest from Zoopla GraphQL API using curl_cffi
+
+    Args:
+        longitude (float): Longitude coordinate
+        latitude (float): Latitude coordinate
+        limit (int): Maximum number of results to return
+
+    Returns:
+        dict: JSON response from the API or None if failed
+    """
+
+    url = "https://api-graphql-lambda.prod.zoopla.co.uk/graphql"
+
+    headers = {
+        "accept": "application/json",
+        "accept-language": "en-US,en;q=0.9",
+        "authorization": "Bearer eyJhbGciOiJQUzI1NiJ9.eyJzdWIiOiIwMTk4YmM5NWIyNTc3MWZhODg1NTBmZTI1NWRkNDU2YyIsInR5cGUiOiJhbm9uIiwicGxhdGZvcm0iOiJ3ZWIiLCJhbm9uX2lkIjoiZmRiYWRkYzU5Mjk3NDkyOWE5MmVlNmI4YWVlZjNlYjQiLCJhdWQiOlsid3d3Lnpvb3BsYS5jby51ayIsImdyYXBocWwuem9vcGxhLmNvLnVrIl0sImlzcyI6Ind3dy56b29wbGEuY28udWsiLCJpYXQiOjE3NTU1MTA1ODMsImV4cCI6MTc1NTUxMjM4M30.BOZUCquYb08xon5mkpYKMHriG-7Ke9GFNUc6on6O75y6TQlujspTNr14JDmV-5BdFnhaq3-tKRVUXph1T2gYqmMqM2_VJ5uFSL8LojVwpHXNE5-jTzMrlzuILPCZ3HM-waPub5o4cSYruLNPz0PF8NfEXMqHjcHNVuSuQyw4vc9dMaHEFLWFfRp6YiLeXbTZyVs6xkXd4ptamKKdmXWBlPfvRsXoFmCk_gnUjKJ4BTiFscGu13U1abCaDx9c2Oplxqdk2cYSyLEkGeN0tRrf65pbJGQFqD3jCnf0FB9KSl7LEokds0XOuHXRrWZoBejLaXh_BchYVdkmfaaAFdKXXg",
+        "content-type": "application/json",
+        "priority": "u=1, i",
+        "sec-ch-ua": '"Chromium";v="139", "Not;A=Brand";v="99"',
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": '"macOS"',
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-site",
+        "x-api-key": "public-1dH5DwBExsUKpdQGs6koWePJO7zeHyDb",
+        "cookie": "zooplapsid=07e3e40059be43e6b0de6314b598a007; ajs_anonymous_id=fdbaddc592974929a92ee6b8aeef3eb4; active_session=anon; zooplasid=0198bc95b25771fa88550fe255dd456c; *cfuvid=IeF15KqJP4myWEH0YHHEyHdFkVw594DA8wvMCPXeXSE-1755510584048-0.0.1.1-604800000; *_cf_bm=1Am8B_J1uqLHB51WMc44WdyA8V.ThrwicAOh..f_xFc-1755511591-1.0.1.1-RgPhtk5MXU_1Hfxg3o92Q3DcJu3omKxnMnds.VNG.jkmS4dLB2sHDAPElaM5X9GjgF7NWIT302ceYKlHaj7kCJSDHn.ls_25tRgIIFuq25U; cf_clearance=hl8dm4HnDlAs4pchStohiTVXtD2j1C27g55xv7Oj4iU-1755511915-1.2.1.1-NpJOu5kXahdRujKujgg5MTptS8ej5_AqgTxa2kYnLbfCHsuxQZBVzEy1WwB_bgfozN0paLV4knHLfJMV_9qd38TmvopA9Ul948K3UmZAEmqMLtM39FHM0xNKeZhTbjiR3HsdX6oJAal3OGwOwpV7dhaZT0ALx4dAFCsi.G7rOa_YwIeFF5VHl.y_a3mvSTiJs85xU4RtLXbQ0.nBbXa1jYwp95skP8Q8oqDACrM19as",
+        "Referer": "https://www.zoopla.co.uk/",
+    }
+
+    # GraphQL query payload
+    payload = {
+        "operationName": "pointsOfInterest",
+        "variables": {"longitude": longitude, "latitude": latitude, "limit": limit},
+        "query": """query pointsOfInterest($longitude:Float!$latitude:Float!$limit:Int) {
+            pointsOfInterestV2(longitude:$longitude latitude:$latitude limit:$limit){
+                ...schools 
+                ...transports
+            }
+        }
+        fragment schools on SchoolPointOfInterest{
+            __typename 
+            name 
+            distanceMiles 
+            ageLow 
+            ageHigh 
+            ofstedLastInspectionDate 
+            ofstedRating
+        }
+        fragment transports on TransportPointOfInterest{
+            __typename 
+            distanceMiles 
+            latitude 
+            longitude 
+            name 
+            tubeLines 
+            type 
+            zone
+        }""",
+    }
+
+    try:
+        # Using curl_cffi with Chrome browser impersonation
+        response = requests.post(
+            url,
+            headers=headers,
+            json=payload,
+            impersonate="chrome120",  # Impersonate Chrome 120
+            timeout=30,
+        )
+        response.raise_for_status()
+
+        return response.json()
+
+    except Exception as e:
+        print(f"Error making GraphQL request: {e}")
+        return None
+
+
+def extract_stations_schools_from_graphql(
+    graphql_data: Dict[str, Any],
+) -> Dict[str, Any]:
+    """
+    Extract stations and schools data from GraphQL API response
+
+    Args:
+        graphql_data (dict): Response from fetch_points_of_interest_graphql
+
+    Returns:
+        dict: Extracted stations and schools data
+    """
+    if not graphql_data or "data" not in graphql_data:
+        return {}
+
+    points = graphql_data["data"].get("pointsOfInterestV2", [])
+
+    # Extract schools
+    schools = [p for p in points if p.get("__typename") == "SchoolPointOfInterest"]
+    school_names = []
+    for school in schools:
+        name = school.get("name", "")
+        distance = school.get("distanceMiles", "")
+        rating = school.get("ofstedRating", "")
+
+        school_info = name
+        if distance:
+            school_info += f" ({distance} miles)"
+        if rating:
+            school_info += f" - {rating}"
+
+        school_names.append(school_info)
+
+    # Extract transport stations
+    transports = [
+        p for p in points if p.get("__typename") == "TransportPointOfInterest"
+    ]
+    station_names = []
+    for transport in transports:
+        name = transport.get("name", "")
+        distance = transport.get("distanceMiles", "")
+        transport_type = transport.get("type", "")
+        zone = transport.get("zone", "")
+
+        station_info = name
+        if transport_type:
+            station_info += f" ({transport_type})"
+        if zone:
+            station_info += f" Zone {zone}"
+        if distance:
+            station_info += f" ({distance} miles)"
+
+        station_names.append(station_info)
+
+    result = {}
+
+    if school_names:
+        result["nearest_schools"] = ", ".join(school_names)
+
+    if station_names:
+        result["nearest_stations"] = ", ".join(station_names)
+
+    return result

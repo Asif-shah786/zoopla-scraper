@@ -14,8 +14,8 @@ import re
 import time
 import csv
 from datetime import datetime
-from fields_extractor import extract_from_html
 from fields_extractor import (
+    extract_from_html,
     fetch_points_of_interest_graphql,
     extract_stations_schools_from_graphql,
 )
@@ -328,54 +328,100 @@ async def fetch_property_details(property_data: dict):
         complete_data = scrape_to_json(property_url, property_id=property_id)
         print(f"✅ Complete extraction successful for property {property_id}")
 
-        # Step 2: Fetch page HTML and try GraphQL stations/schools with coordinates
-        print(f"   🔄 Fetching HTML for stations/schools & coordinate extraction...")
-        working_headers = SEARCH_HEADERS.copy()
-        working_headers["Referer"] = config.SEARCH_BASE_URL
-
-        response = curl_cffi.get(
-            property_url,
-            headers=working_headers,
-            impersonate=config.IMPERSONATE_BROWSER,
-            timeout=config.REQUEST_TIMEOUT,
-        )
-        html = response.text
-        print(f"✅ Successfully fetched HTML with working headers")
-
-        # Coordinates from complete data or HTML
-        lat = complete_data.get("latitude") or complete_data.get("lat")
-        lng = complete_data.get("longitude") or complete_data.get("lng")
-        if not lat or not lng:
-            import re
-
-            lat_match = re.search(r'"latitude":\s*([0-9.-]+)', html)
-            lng_match = re.search(r'"longitude":\s*([0-9.-]+)', html)
-            if lat_match and lng_match:
-                lat = float(lat_match.group(1))
-                lng = float(lng_match.group(1))
-                print(f"   📍 Found coordinates in HTML: {lat}, {lng}")
-
-        # Prefer GraphQL stations/schools, fallback to legacy HTML extraction
-        stations_schools_data = {}
+        # Step 2: Fetch stations and schools data using GraphQL API
+        print(f"   🔄 Fetching stations/schools data via GraphQL API...")
         try:
+            # Try to get coordinates from the complete data
+            lat = complete_data.get("latitude") or complete_data.get("lat")
+            lng = complete_data.get("longitude") or complete_data.get("lng")
+
+            # If no coordinates, try to geocode the address
+            if not lat or not lng:
+                address = complete_data.get("address") or complete_data.get(
+                    "display_address"
+                )
+                if address:
+                    print(f"   🔄 Geocoding address: {address[:50]}...")
+                    try:
+                        # Try to extract coordinates from the property page HTML first
+                        print(f"   🔍 Searching for coordinates in HTML...")
+                        working_headers = SEARCH_HEADERS.copy()
+                        working_headers["Referer"] = config.SEARCH_BASE_URL
+                        response = curl_cffi.get(
+                            property_url,
+                            headers=working_headers,
+                            impersonate=config.IMPERSONATE_BROWSER,
+                            timeout=config.REQUEST_TIMEOUT,
+                        )
+                        html = response.text
+
+                        # Look for coordinates in the HTML
+                        import re
+
+                        lat_match = re.search(r'"latitude":\s*([0-9.-]+)', html)
+                        lng_match = re.search(r'"longitude":\s*([0-9.-]+)', html)
+
+                        if lat_match and lng_match:
+                            lat = float(lat_match.group(1))
+                            lng = float(lng_match.group(1))
+                            print(f"   📍 Found coordinates in HTML: {lat}, {lng}")
+                        else:
+                            print(f"   ⚠️ No coordinates found in HTML")
+
+                    except Exception as e:
+                        print(f"   ⚠️ HTML coordinate extraction failed: {e}")
+
             if lat and lng:
-                print(f"   📍 Using coordinates for GraphQL: {lat}, {lng}")
-                points = fetch_points_of_interest_graphql(float(lng), float(lat))
-                if points:
+                print(f"   📍 Using coordinates: {lat}, {lng}")
+                points_data = fetch_points_of_interest_graphql(float(lng), float(lat))
+                if points_data:
                     stations_schools_data = extract_stations_schools_from_graphql(
-                        points
+                        points_data
                     )
-                    print(f"✅ GraphQL API successful - points of interest found")
+                    print(f"✅ GraphQL API successful - found points of interest data")
                 else:
-                    print(f"⚠️ GraphQL API returned no data, using HTML fallback")
+                    print(
+                        f"⚠️ GraphQL API returned no data, falling back to HTML extraction"
+                    )
+                    # Fallback to legacy HTML extraction
+                    working_headers = SEARCH_HEADERS.copy()
+                    working_headers["Referer"] = config.SEARCH_BASE_URL
+                    response = curl_cffi.get(
+                        property_url,
+                        headers=working_headers,
+                        impersonate=config.IMPERSONATE_BROWSER,
+                        timeout=config.REQUEST_TIMEOUT,
+                    )
+                    html = response.text
                     stations_schools_data = extract_stations_schools_only(
                         html, property_id
                     )
             else:
-                print(f"⚠️ No coordinates available, using HTML fallback")
+                print(f"⚠️ No coordinates available, falling back to HTML extraction")
+                # Fallback to legacy HTML extraction
+                working_headers = SEARCH_HEADERS.copy()
+                working_headers["Referer"] = config.SEARCH_BASE_URL
+                response = curl_cffi.get(
+                    property_url,
+                    headers=working_headers,
+                    impersonate=config.IMPERSONATE_BROWSER,
+                    timeout=config.REQUEST_TIMEOUT,
+                )
+                html = response.text
                 stations_schools_data = extract_stations_schools_only(html, property_id)
+
         except Exception as e:
-            print(f"⚠️ GraphQL API failed ({e}), using HTML fallback")
+            print(f"⚠️ GraphQL API failed ({e}), falling back to HTML extraction")
+            # Fallback to legacy HTML extraction
+            working_headers = SEARCH_HEADERS.copy()
+            working_headers["Referer"] = config.SEARCH_BASE_URL
+            response = curl_cffi.get(
+                property_url,
+                headers=working_headers,
+                impersonate=config.IMPERSONATE_BROWSER,
+                timeout=config.REQUEST_TIMEOUT,
+            )
+            html = response.text
             stations_schools_data = extract_stations_schools_only(html, property_id)
 
         # Step 4: Append stations/schools to the complete data
@@ -385,7 +431,7 @@ async def fetch_property_details(property_data: dict):
         final_data = property_data.copy()
         final_data.update(complete_data)
 
-        # Step 6: Add coordinates to the final data if present
+        # Step 6: Add coordinates to the final data if we found them
         if lat and lng:
             final_data["latitude"] = lat
             final_data["longitude"] = lng
@@ -434,105 +480,25 @@ async def fetch_property_details(property_data: dict):
 
 
 async def main():
-    """Main function to orchestrate the bulk scraping process."""
+    """Main function to orchestrate the bulk scraping process for one hardcoded URL."""
     # Record start time for filename
     start_time = datetime.now()
 
-    print(f"🚀 Starting Zoopla Bulk Scraper")
+    print(f"🚀 Starting Zoopla Bulk Scraper - Single Property Test")
 
-    # Display configuration in a user-friendly way
-    if config.MAX_PROPERTIES == "ALL" and config.PAGES_TO_SCRAPE == "ALL":
-        print(
-            f"📊 Configuration: ALL available properties from ALL available pages, {config.REQUEST_DELAY}s delay"
-        )
-    elif config.MAX_PROPERTIES == "ALL":
-        print(
-            f"📊 Configuration: ALL available properties, {config.PAGES_TO_SCRAPE} pages, {config.REQUEST_DELAY}s delay"
-        )
-    elif config.PAGES_TO_SCRAPE == "ALL":
-        print(
-            f"📊 Configuration: {config.MAX_PROPERTIES} properties max, ALL available pages, {config.REQUEST_DELAY}s delay"
-        )
-    else:
-        print(
-            f"📊 Configuration: {config.MAX_PROPERTIES} properties max, {config.PAGES_TO_SCRAPE} pages, {config.REQUEST_DELAY}s delay"
-        )
+    # Use hardcoded property URL instead of searching
+    all_properties = [
+        {
+            "page": "1",
+            "scraped_at": datetime.now().isoformat(),
+            "source": "zoopla",
+            "property_id": "69794180",
+            "property_url": "https://www.zoopla.co.uk/for-sale/details/69794180/",
+        }
+    ]
 
-    all_properties = []
-
-    # Determine how many pages to scrape
-    if config.PAGES_TO_SCRAPE == "ALL":
-        # Auto-detect available pages by checking page 1 first
-        print("🔄 Auto-detecting available pages...")
-        page = 1
-        max_pages = 1  # Start with 1, will expand as we find more
-
-        while True:
-            property_urls = await fetch_zoopla_page(page)
-
-            if not property_urls:
-                print(f"No properties found on page {page}, stopping page detection")
-                break
-
-            # Add properties from this page
-            if config.MAX_PROPERTIES == "ALL":
-                all_properties.extend(property_urls)
-                print(f"Added ALL {len(property_urls)} properties from page {page}")
-                print(f"📊 Total property URLs found so far: {len(all_properties)}")
-            else:
-                available_slots = config.MAX_PROPERTIES - len(all_properties)
-                if available_slots <= 0:
-                    break
-
-                limited_urls = property_urls[:available_slots]
-                all_properties.extend(limited_urls)
-                print(f"Added {len(limited_urls)} properties from page {page}")
-                print(f"📊 Total property URLs found so far: {len(all_properties)}")
-
-                if len(all_properties) >= config.MAX_PROPERTIES:
-                    break
-
-            # Always check the next page unless we get 0 properties
-            if len(property_urls) > 0:
-                page += 1
-                max_pages = page
-                print(
-                    f"📄 Page {page-1} had {len(property_urls)} properties, checking page {page}..."
-                )
-            else:
-                print(f"📄 Page {page} had no properties, stopping page detection")
-                break
-
-    else:
-        # Use numeric page limit
-        for page in range(1, config.PAGES_TO_SCRAPE + 1):
-            property_urls = await fetch_zoopla_page(page)
-
-            if not property_urls:
-                print(f"No properties found on page {page}")
-                continue
-
-            # Handle "ALL" vs numeric limit
-            if config.MAX_PROPERTIES == "ALL":
-                # Scrape all available properties from this page
-                all_properties.extend(property_urls)
-                print(f"Added ALL {len(property_urls)} properties from page {page}")
-                print(f"📊 Total property URLs found so far: {len(all_properties)}")
-            else:
-                # Limit properties based on numeric configuration
-                available_slots = config.MAX_PROPERTIES - len(all_properties)
-                if available_slots <= 0:
-                    break
-
-                limited_urls = property_urls[:available_slots]
-                all_properties.extend(limited_urls)
-                print(f"Added {len(limited_urls)} properties from page {page}")
-                print(f"📊 Total property URLs found so far: {len(all_properties)}")
-
-                if len(all_properties) >= config.MAX_PROPERTIES:
-                    break
-
-    print(f"\n📊 Total property URLs found: {len(all_properties)}")
+    print(f"📊 Using hardcoded property: {all_properties[0]['property_url']}")
+    print(f"📊 Total properties to process: {len(all_properties)}")
 
     # Now fetch detailed information for each property
     detailed_properties = []
@@ -596,30 +562,17 @@ async def main():
         # Record end time for filename
         end_time = datetime.now()
 
-        # Generate meaningful filename with scraping session details
+        # Generate meaningful filename for single property test
         total_properties = len(detailed_properties)
-        pages_scraped = config.PAGES_TO_SCRAPE
 
-        # Format: day-month-startTime-endTime_pageStart-pageEnd_propertyStart-propertyEnd.json
+        # Format: day-month-startTime-endTime_single-property_test.json
         day = start_time.strftime("%d")
         month = start_time.strftime("%B").lower()  # e.g., "july"
         start_hour = start_time.strftime("%-I%p").lower()  # e.g., "7pm"
         end_hour = end_time.strftime("%-I%p").lower()  # e.g., "8pm"
 
-        # Page range
-        if pages_scraped == 1:
-            page_range = "page1"
-        else:
-            page_range = f"page1-{pages_scraped}"
-
-        # Property range
-        if total_properties == 1:
-            property_range = "property1"
-        else:
-            property_range = f"property1-{total_properties}"
-
-        # Create descriptive filename
-        filename = f"{day}-{month}-{start_hour}_{page_range}_{property_range}.json"
+        # Create descriptive filename for single property test
+        filename = f"{day}-{month}-{start_hour}_single-property_test.json"
 
         # Export to JSON
         if config.EXPORT_TO_JSON:
