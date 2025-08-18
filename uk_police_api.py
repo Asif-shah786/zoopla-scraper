@@ -118,100 +118,119 @@ def build_accurate_summary(
 def load_properties(max_items: int = 10) -> list[dict]:
     props: list[dict] = []
     try:
-        import pandas as pd
-
-        path = "data/zoopla_properties_august_mini_100_with_geo_cleaned.csv"
-        df = pd.read_csv(path)
-        needed = {"lat", "lon", "address", "listing_title", "postcode"}
-        if not needed.issubset(df.columns):
-            raise ValueError("CSV missing required columns")
-        for _, row in df.head(max_items).iterrows():
-            lat = row.get("lat")
-            lng = row.get("lon")
-
-            # Skip rows with missing or invalid coordinates
-            if pd.isna(lat) or pd.isna(lng) or lat == 0 or lng == 0:
-                continue
-
-            props.append(
-                {
-                    "title": str(row.get("listing_title", "")).strip(),
-                    "address": str(row.get("address", "")).strip(),
-                    "postcode": (str(row.get("postcode")) or "").strip() or None,
-                    "lat": float(lat),
-                    "lng": float(lng),
-                }
-            )
-        return props
-    except Exception:
-        # Fallback to previously generated sample JSON
         import json
 
-        with open("data/simple_properties_sample.json", "r", encoding="utf-8") as f:
+        # Use the new JSON file
+        path = "18-august-12pm_page1-ALL_property1-10_cleaned.json"
+        with open(path, "r", encoding="utf-8") as f:
             data = json.load(f)
-        for p in data.get("properties", [])[:max_items]:
-            loc = p.get("location") or {}
-            lat = loc.get("latitude")
-            lng = loc.get("longitude")
+
+        # Extract only essential fields needed for crime data lookup
+        for p in data[:max_items]:
+            lat = p.get("lat")
+            lng = p.get("lon")
 
             # Skip properties with missing coordinates
-            if lat is None or lng is None:
+            if lat is None or lng is None or lat == 0 or lng == 0:
                 continue
 
             props.append(
                 {
-                    "title": p.get("title") or "",
-                    "address": p.get("address") or "",
-                    "postcode": loc.get("postcode"),
-                    "lat": float(lat),
-                    "lng": float(lng),
+                    "title": p.get("listing_title") or "",
+                    "address": p.get("address_full") or "",
+                    "postcode": p.get("outcode"),
+                    "lat": float(lat) if lat is not None else 0.0,
+                    "lng": float(lng) if lng is not None else 0.0,
                 }
             )
         return props
+    except Exception as e:
+        print(f"Error loading properties: {e}")
+        # Fallback to previously generated sample JSON
+        try:
+            with open("data/simple_properties_sample.json", "r", encoding="utf-8") as f:
+                data = json.load(f)
+            for p in data.get("properties", [])[:max_items]:
+                loc = p.get("location") or {}
+                lat = loc.get("latitude")
+                lng = loc.get("longitude")
+
+                # Skip properties with missing coordinates
+                if lat is None or lng is None:
+                    continue
+
+                props.append(
+                    {
+                        "title": p.get("title") or "",
+                        "address": p.get("address") or "",
+                        "postcode": loc.get("postcode"),
+                        "lat": float(lat),
+                        "lng": float(lng),
+                    }
+                )
+            return props
+        except Exception as fallback_error:
+            print(f"Fallback also failed: {fallback_error}")
+            return []
 
 
 def run_property_crime_summaries(max_items: int = 10) -> None:
     properties = load_properties(max_items=max_items)
     print(f"Generating 6-month crime summaries for {len(properties)} properties...\n")
-    print(
-        "ℹ️  Note: Crime data is based on incidents within ~1km radius of each property location"
-    )
-    print(
-        "    This may include crimes on nearby streets, not necessarily on the property's street\n"
-    )
+
     results: list[dict] = []
     for idx, prop in enumerate(properties, start=1):
         lat = prop.get("lat")
         lng = prop.get("lng")
         address = prop.get("address") or prop.get("title") or "This property"
         postcode = prop.get("postcode")
+
         if lat is None or lng is None:
             print(f"{idx}. Skipping (no coordinates): {address}")
             continue
+
+        print(f"{idx}. Processing: {address}")
         agg = aggregate_6month_crime(lat, lng)
         summary = build_accurate_summary(address, postcode, agg)
-        print(f"{idx}. {summary}")
-        results.append(
-            {
-                "address": address,
-                "postcode": postcode,
-                "lat": lat,
-                "lng": lng,
-                "summary": summary,
-                "aggregate": agg,
-            }
-        )
 
-    # Save for app consumption
+        # Just show simple progress - no crime details
+        print(f"   ✅ Ingested crime data for property {idx}")
+
+        # Create enhanced property object with crime data
+        enhanced_property = {
+            # Original property data
+            **prop,
+            # Crime data
+            "crime_summary": summary,
+            "crime_data": agg,
+        }
+
+        results.append(enhanced_property)
+
+    # Save enhanced properties with crime data
     try:
         import json
 
-        out_path = "data/property_crime_summaries.json"
-        with open(out_path, "w", encoding="utf-8") as f:
-            json.dump(results, f, indent=2, ensure_ascii=False)
-        print(f"\nSaved summaries to: {out_path}")
-    except Exception:
-        pass
+        # Save crime summaries for quick reference - use current directory
+        crime_summaries_path = "property_crime_summaries.json"
+        crime_summaries = [
+            {
+                "address": r.get("address"),
+                "postcode": r.get("postcode"),
+                "lat": r.get("lat"),
+                "lng": r.get("lng"),
+                "summary": r.get("crime_summary"),
+                "aggregate": r.get("crime_data"),
+            }
+            for r in results
+        ]
+
+        with open(crime_summaries_path, "w", encoding="utf-8") as f:
+            json.dump(crime_summaries, f, indent=2, ensure_ascii=False)
+        print(f"Saved crime summaries to: {crime_summaries_path}")
+
+    except Exception as e:
+        print(f"Error saving files: {e}")
 
 
 if __name__ == "__main__":

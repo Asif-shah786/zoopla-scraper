@@ -6,9 +6,9 @@ Modify these settings to customize the scraping behavior.
 """
 
 # ===== SCRAPING LIMITS =====
-MAX_PROPERTIES = 10
+MAX_PROPERTIES = 5
 PAGES_TO_SCRAPE = "ALL"
-REQUEST_DELAY = 3  # Seconds to wait between property requests (be respectful!)
+REQUEST_DELAY = 2  # Seconds to wait between property requests (be respectful!)
 
 # ===== SEARCH CONFIGURATION =====
 SEARCH_LOCATION = "greater-manchester"  # Location to search for properties

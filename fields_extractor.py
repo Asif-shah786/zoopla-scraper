@@ -184,7 +184,15 @@ def _extract_nearest_stations(html: str) -> Dict[str, Any]:
             # Clean up and split by comma, removing whitespace
             distances = [d.strip() for d in distances_text.split(",") if d.strip()]
             if distances:
-                out["nearest_stations_distances"] = ", ".join(distances)
+                # Format distances to one decimal place
+                formatted_distances = []
+                for d in distances:
+                    try:
+                        distance = float(d)
+                        formatted_distances.append(f"{distance:.1f}")
+                    except ValueError:
+                        formatted_distances.append(d)
+                out["nearest_stations_distances"] = ", ".join(formatted_distances)
             break
 
     return out
@@ -532,7 +540,12 @@ def extract_stations_schools_from_graphql(
 
         school_info = name
         if distance:
-            school_info += f" ({distance} miles)"
+            # Format distance to one decimal place
+            try:
+                distance_float = float(distance)
+                school_info += f" ({distance_float:.1f} miles)"
+            except ValueError:
+                school_info += f" ({distance} miles)"
         if rating:
             school_info += f" - {rating}"
 
@@ -547,15 +560,17 @@ def extract_stations_schools_from_graphql(
         name = transport.get("name", "")
         distance = transport.get("distanceMiles", "")
         transport_type = transport.get("type", "")
-        zone = transport.get("zone", "")
 
         station_info = name
         if transport_type:
             station_info += f" ({transport_type})"
-        if zone:
-            station_info += f" Zone {zone}"
         if distance:
-            station_info += f" ({distance} miles)"
+            # Format distance to one decimal place
+            try:
+                distance_float = float(distance)
+                station_info += f" ({distance_float:.1f} miles)"
+            except ValueError:
+                station_info += f" ({distance} miles)"
 
         station_names.append(station_info)
 
