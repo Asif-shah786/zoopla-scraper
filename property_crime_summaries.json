@@ -1,0 +1,2859 @@
+[
+  {
+    "address": "Third Avenue, Bolton BL1",
+    "postcode": "BL1",
+    "lat": 53.5776,
+    "lng": -2.457513,
+    "summary": "🟢 Third Avenue, Bolton BL1 (BL1): Low crime - 5 incidents within 1.0km radius (near On or near Willis Street, On or near Back Nunnery Road), mainly Violent Crime, Other Crime (falling trend)",
+    "aggregate": {
+      "total": 5,
+      "by_category": {
+        "violent-crime": 2,
+        "other-crime": 2,
+        "other-theft": 1
+      },
+      "top_streets": {
+        "On or near Willis Street": 1,
+        "On or near Back Nunnery Road": 1,
+        "On or near Thornton Avenue": 1
+      },
+      "outcomes": {
+        "Under investigation": 5
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 1,
+        "2025-05": 3,
+        "2025-04": 0,
+        "2025-03": 1
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Albert Vaults, 169-171, Chapel Street, Salford, Greater Manchester M3",
+    "postcode": "M3",
+    "lat": 53.483557,
+    "lng": -2.254223,
+    "summary": "🟡 Albert Vaults, 169-171, Chapel Street, Salford, Greater Manchester M3 (M3): Moderate crime - 9 incidents within 1.0km radius (near On or near Wood Street, On or near Southall Street), mainly Violent Crime, Other Theft (falling trend)",
+    "aggregate": {
+      "total": 9,
+      "by_category": {
+        "violent-crime": 7,
+        "other-theft": 1,
+        "theft-from-the-person": 1
+      },
+      "top_streets": {
+        "On or near Wood Street": 3,
+        "On or near Southall Street": 1,
+        "On or near Left Bank": 1
+      },
+      "outcomes": {
+        "Under investigation": 6,
+        "Investigation complete; no suspect identified": 3
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 2,
+        "2025-05": 4,
+        "2025-04": 1,
+        "2025-03": 2
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "42 Queens Drive SK4",
+    "postcode": "SK4",
+    "lat": 53.414359,
+    "lng": -2.193309,
+    "summary": "🟢 42 Queens Drive SK4 (SK4): Low crime - 1 incidents within 1.0km radius (near On or near Lodge Court), mainly Violent Crime (stable trend)",
+    "aggregate": {
+      "total": 1,
+      "by_category": {
+        "violent-crime": 1
+      },
+      "top_streets": {
+        "On or near Lodge Court": 1
+      },
+      "outcomes": {
+        "Under investigation": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 1,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 0
+      },
+      "trend": "stable"
+    }
+  },
+  {
+    "address": "Wordsworth Avenue, Billinge, Wigan WN5",
+    "postcode": "WN5",
+    "lat": 53.515362,
+    "lng": -2.713549,
+    "summary": "🔴 Wordsworth Avenue, Billinge, Wigan WN5 (WN5): High crime area - 32 incidents within 1.0km radius (near On or near Oakley Avenue, On or near Sports/recreation Area), mainly Violent Crime, Anti Social Behaviour (falling trend)",
+    "aggregate": {
+      "total": 32,
+      "by_category": {
+        "violent-crime": 10,
+        "anti-social-behaviour": 7,
+        "other-crime": 4,
+        "robbery": 3,
+        "other-theft": 2,
+        "public-order": 2,
+        "burglary": 1,
+        "shoplifting": 1,
+        "drugs": 1,
+        "vehicle-crime": 1
+      },
+      "top_streets": {
+        "On or near Oakley Avenue": 12,
+        "On or near Sports/recreation Area": 8,
+        "On or near Crank Road": 6
+      },
+      "outcomes": {
+        "Investigation complete; no suspect identified": 7,
+        "Unable to prosecute suspect": 7,
+        "Not provided": 7,
+        "Under investigation": 6,
+        "Local resolution": 2,
+        "Further investigation is not in the public interest": 2,
+        "Action to be taken by another organisation": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 10,
+        "2025-05": 7,
+        "2025-04": 3,
+        "2025-03": 12
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Hazel Dene Close, Bury BL9",
+    "postcode": "BL9",
+    "lat": 53.57867,
+    "lng": -2.29419,
+    "summary": "🟢 Hazel Dene Close, Bury BL9 (BL9): Low crime - 3 incidents within 1.0km radius (near On or near Back Wellington Road South, On or near Central Avenue), mainly Violent Crime, Public Order (rising trend)",
+    "aggregate": {
+      "total": 3,
+      "by_category": {
+        "violent-crime": 2,
+        "public-order": 1
+      },
+      "top_streets": {
+        "On or near Back Wellington Road South": 1,
+        "On or near Central Avenue": 1,
+        "On or near Cornwall Drive": 1
+      },
+      "outcomes": {
+        "Under investigation": 3
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 2,
+        "2025-05": 0,
+        "2025-04": 1,
+        "2025-03": 0
+      },
+      "trend": "rising"
+    }
+  },
+  {
+    "address": "Hunt Street, Atherton M46",
+    "postcode": "M46",
+    "lat": 53.527519,
+    "lng": -2.486722,
+    "summary": "🟢 Hunt Street, Atherton M46 (M46): Low crime - 2 incidents within 1.0km radius (near On or near Hesketh Street, On or near Field Hurst Croft), mainly Violent Crime (stable trend)",
+    "aggregate": {
+      "total": 2,
+      "by_category": {
+        "violent-crime": 2
+      },
+      "top_streets": {
+        "On or near Hesketh Street": 1,
+        "On or near Field Hurst Croft": 1
+      },
+      "outcomes": {
+        "Under investigation": 2
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 1,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 1
+      },
+      "trend": "stable"
+    }
+  },
+  {
+    "address": "Withington Drive, Tyldesley M29",
+    "postcode": "M29",
+    "lat": 53.506712,
+    "lng": -2.445004,
+    "summary": "🟢 Withington Drive, Tyldesley M29 (M29): Low crime - 1 incidents within 1.0km radius (near On or near Brindley Street), mainly Violent Crime (falling trend)",
+    "aggregate": {
+      "total": 1,
+      "by_category": {
+        "violent-crime": 1
+      },
+      "top_streets": {
+        "On or near Brindley Street": 1
+      },
+      "outcomes": {
+        "Unable to prosecute suspect": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 1,
+        "2025-03": 0
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "New Lane, Eccles M30",
+    "postcode": "M30",
+    "lat": 53.480978,
+    "lng": -2.365687,
+    "summary": "🟢 New Lane, Eccles M30 (M30): Low crime - 1 incidents within 1.0km radius (near On or near Claude Street), mainly Other Crime (falling trend)",
+    "aggregate": {
+      "total": 1,
+      "by_category": {
+        "other-crime": 1
+      },
+      "top_streets": {
+        "On or near Claude Street": 1
+      },
+      "outcomes": {
+        "Under investigation": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 1
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Shalewood Court, Atherton M46",
+    "postcode": "M46",
+    "lat": 53.521971,
+    "lng": -2.506492,
+    "summary": "🟢 Shalewood Court, Atherton M46 (M46): Low crime - 2 incidents within 1.0km radius (near On or near Hesketh Street, On or near Field Hurst Croft), mainly Violent Crime (stable trend)",
+    "aggregate": {
+      "total": 2,
+      "by_category": {
+        "violent-crime": 2
+      },
+      "top_streets": {
+        "On or near Hesketh Street": 1,
+        "On or near Field Hurst Croft": 1
+      },
+      "outcomes": {
+        "Under investigation": 2
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 1,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 1
+      },
+      "trend": "stable"
+    }
+  },
+  {
+    "address": "Bury &amp; Rochdale Old Road, Birtle, Bury BL9",
+    "postcode": "BL9",
+    "lat": 53.604507,
+    "lng": -2.242995,
+    "summary": "🟢 Bury &amp; Rochdale Old Road, Birtle, Bury BL9 (BL9): Low crime - 1 incidents within 1.0km radius (near On or near Foxglove Drive), mainly Violent Crime (falling trend)",
+    "aggregate": {
+      "total": 1,
+      "by_category": {
+        "violent-crime": 1
+      },
+      "top_streets": {
+        "On or near Foxglove Drive": 1
+      },
+      "outcomes": {
+        "Unable to prosecute suspect": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 1,
+        "2025-03": 0
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "42 City Road East, Deansgate, Manchester, Greater Manchester M15",
+    "postcode": "M15",
+    "lat": 53.471962,
+    "lng": -2.250177,
+    "summary": "🟡 42 City Road East, Deansgate, Manchester, Greater Manchester M15 (M15): Moderate crime - 6 incidents within 1.0km radius (near On or near Wood Street, On or near Ormsgill Street), mainly Violent Crime, Criminal Damage Arson (falling trend)",
+    "aggregate": {
+      "total": 6,
+      "by_category": {
+        "violent-crime": 4,
+        "criminal-damage-arson": 1,
+        "other-theft": 1
+      },
+      "top_streets": {
+        "On or near Wood Street": 3,
+        "On or near Ormsgill Street": 1,
+        "On or near Left Bank": 1
+      },
+      "outcomes": {
+        "Investigation complete; no suspect identified": 4,
+        "Under investigation": 2
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 2,
+        "2025-05": 3,
+        "2025-04": 0,
+        "2025-03": 1
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Alto, Block B, Sillavan Way, Salford M3",
+    "postcode": "M3",
+    "lat": 53.48458,
+    "lng": -2.255402,
+    "summary": "🟡 Alto, Block B, Sillavan Way, Salford M3 (M3): Moderate crime - 10 incidents within 1.0km radius (near On or near Wood Street, On or near Southall Street), mainly Violent Crime, Other Theft (falling trend)",
+    "aggregate": {
+      "total": 10,
+      "by_category": {
+        "violent-crime": 8,
+        "other-theft": 1,
+        "theft-from-the-person": 1
+      },
+      "top_streets": {
+        "On or near Wood Street": 3,
+        "On or near Southall Street": 1,
+        "On or near Left Bank": 1
+      },
+      "outcomes": {
+        "Under investigation": 6,
+        "Investigation complete; no suspect identified": 3,
+        "Unable to prosecute suspect": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 2,
+        "2025-05": 4,
+        "2025-04": 2,
+        "2025-03": 2
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Chaddock Lane, Worsley M28",
+    "postcode": "M28",
+    "lat": 53.504161,
+    "lng": -2.425062,
+    "summary": "🟢 Chaddock Lane, Worsley M28 (M28): Low crime - 1 incidents within 1.0km radius (near On or near Brindley Street), mainly Violent Crime (falling trend)",
+    "aggregate": {
+      "total": 1,
+      "by_category": {
+        "violent-crime": 1
+      },
+      "top_streets": {
+        "On or near Brindley Street": 1
+      },
+      "outcomes": {
+        "Unable to prosecute suspect": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 1,
+        "2025-03": 0
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Stableford Close, Standish WN6",
+    "postcode": "WN6",
+    "lat": 53.588518,
+    "lng": -2.65339,
+    "summary": "🟢 Stableford Close, Standish WN6 (WN6): Safe area - no crimes reported within 1.0km radius in past 6 months",
+    "aggregate": {
+      "total": 0,
+      "by_category": {},
+      "top_streets": {},
+      "outcomes": {},
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 0
+      },
+      "trend": "stable"
+    }
+  },
+  {
+    "address": "New Barton Street, Salford M6",
+    "postcode": "M6",
+    "lat": 53.500488,
+    "lng": -2.311422,
+    "summary": "🟢 New Barton Street, Salford M6 (M6): Low crime - 1 incidents within 1.0km radius (near On or near Crosby Road), mainly Other Theft (falling trend)",
+    "aggregate": {
+      "total": 1,
+      "by_category": {
+        "other-theft": 1
+      },
+      "top_streets": {
+        "On or near Crosby Road": 1
+      },
+      "outcomes": {
+        "Action to be taken by another organisation": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 1
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Shergar Way, Salford M6",
+    "postcode": "M6",
+    "lat": 53.498556,
+    "lng": -2.275855,
+    "summary": "🟢 Shergar Way, Salford M6 (M6): Low crime - 2 incidents within 1.0km radius (near On or near Elton's Yard, On or near Croft Street), mainly Violent Crime (falling trend)",
+    "aggregate": {
+      "total": 2,
+      "by_category": {
+        "violent-crime": 2
+      },
+      "top_streets": {
+        "On or near Elton's Yard": 1,
+        "On or near Croft Street": 1
+      },
+      "outcomes": {
+        "Under investigation": 1,
+        "Unable to prosecute suspect": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 1,
+        "2025-04": 1,
+        "2025-03": 0
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "No 1 Old Trafford, 4 Wharf End, Manchester M17",
+    "postcode": "M17",
+    "lat": 53.4680615639098,
+    "lng": -2.31499972932331,
+    "summary": "🟢 No 1 Old Trafford, 4 Wharf End, Manchester M17 (M17): Safe area - no crimes reported within 1.0km radius in past 6 months",
+    "aggregate": {
+      "total": 0,
+      "by_category": {},
+      "top_streets": {},
+      "outcomes": {},
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 0
+      },
+      "trend": "stable"
+    }
+  },
+  {
+    "address": "Bradgreen Road, Eccles M30",
+    "postcode": "M30",
+    "lat": 53.490492,
+    "lng": -2.361383,
+    "summary": "🟢 Bradgreen Road, Eccles M30 (M30): Low crime - 1 incidents within 1.0km radius (near On or near Claude Street), mainly Other Crime (falling trend)",
+    "aggregate": {
+      "total": 1,
+      "by_category": {
+        "other-crime": 1
+      },
+      "top_streets": {
+        "On or near Claude Street": 1
+      },
+      "outcomes": {
+        "Under investigation": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 1
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Laburnum Street, Salford M6",
+    "postcode": "M6",
+    "lat": 53.485212,
+    "lng": -2.293613,
+    "summary": "🟢 Laburnum Street, Salford M6 (M6): Low crime - 2 incidents within 1.0km radius (near On or near Anchorage Quay, On or near Carolina Way), mainly Violent Crime (falling trend)",
+    "aggregate": {
+      "total": 2,
+      "by_category": {
+        "violent-crime": 2
+      },
+      "top_streets": {
+        "On or near Anchorage Quay": 1,
+        "On or near Carolina Way": 1
+      },
+      "outcomes": {
+        "Under investigation": 2
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 1,
+        "2025-04": 0,
+        "2025-03": 1
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "The Mount, Hale Barns, Altrincham, Greater Manchester WA15",
+    "postcode": "WA15",
+    "lat": 53.369426,
+    "lng": -2.310792,
+    "summary": "🟢 The Mount, Hale Barns, Altrincham, Greater Manchester WA15 (WA15): Safe area - no crimes reported within 1.0km radius in past 6 months",
+    "aggregate": {
+      "total": 0,
+      "by_category": {},
+      "top_streets": {},
+      "outcomes": {},
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 0
+      },
+      "trend": "stable"
+    }
+  },
+  {
+    "address": "Victoria Mill, Houldsworth Street, Reddish, Stockport SK5",
+    "postcode": "SK5",
+    "lat": 53.439647,
+    "lng": -2.164151,
+    "summary": "🟢 Victoria Mill, Houldsworth Street, Reddish, Stockport SK5 (SK5): Low crime - 1 incidents within 1.0km radius (near On or near Wellington Road North), mainly Other Theft (falling trend)",
+    "aggregate": {
+      "total": 1,
+      "by_category": {
+        "other-theft": 1
+      },
+      "top_streets": {
+        "On or near Wellington Road North": 1
+      },
+      "outcomes": {
+        "Under investigation": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 1,
+        "2025-04": 0,
+        "2025-03": 0
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Northern Quarter M4",
+    "postcode": "M4",
+    "lat": 53.484882,
+    "lng": -2.236476,
+    "summary": "🟡 Northern Quarter M4 (M4): Moderate crime - 10 incidents within 1.0km radius (near On or near Wood Street, On or near Southall Street), mainly Violent Crime, Other Theft (falling trend)",
+    "aggregate": {
+      "total": 10,
+      "by_category": {
+        "violent-crime": 8,
+        "other-theft": 1,
+        "theft-from-the-person": 1
+      },
+      "top_streets": {
+        "On or near Wood Street": 3,
+        "On or near Southall Street": 1,
+        "On or near Butler Lane": 1
+      },
+      "outcomes": {
+        "Under investigation": 7,
+        "Investigation complete; no suspect identified": 3
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 3,
+        "2025-05": 3,
+        "2025-04": 2,
+        "2025-03": 2
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Chisholm Close Standish, Wigan WN6",
+    "postcode": "WN6",
+    "lat": 53.593655,
+    "lng": -2.685406,
+    "summary": "🟡 Chisholm Close Standish, Wigan WN6 (WN6): Moderate crime - 10 incidents within 1.0km radius (near On or near Mossy Lea Road, On or near Shopping Area), mainly Anti Social Behaviour, Criminal Damage Arson (falling trend)",
+    "aggregate": {
+      "total": 10,
+      "by_category": {
+        "anti-social-behaviour": 3,
+        "criminal-damage-arson": 2,
+        "vehicle-crime": 1,
+        "violent-crime": 1,
+        "other-theft": 1,
+        "drugs": 1,
+        "possession-of-weapons": 1
+      },
+      "top_streets": {
+        "On or near Mossy Lea Road": 4,
+        "On or near Shopping Area": 2,
+        "On or near Almond Brook Road": 2
+      },
+      "outcomes": {
+        "Unable to prosecute suspect": 3,
+        "Not provided": 3,
+        "Under investigation": 2,
+        "Investigation complete; no suspect identified": 1,
+        "Local resolution": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 2,
+        "2025-05": 3,
+        "2025-04": 3,
+        "2025-03": 2
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Bolton Road, Radcliffe, Manchester M26",
+    "postcode": "M26",
+    "lat": 53.562858,
+    "lng": -2.345031,
+    "summary": "🟢 Bolton Road, Radcliffe, Manchester M26 (M26): Low crime - 1 incidents within 1.0km radius (near On or near Wilson Street), mainly Violent Crime (stable trend)",
+    "aggregate": {
+      "total": 1,
+      "by_category": {
+        "violent-crime": 1
+      },
+      "top_streets": {
+        "On or near Wilson Street": 1
+      },
+      "outcomes": {
+        "Under investigation": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 1,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 0
+      },
+      "trend": "stable"
+    }
+  },
+  {
+    "address": "Reservoir Street, Salford M6",
+    "postcode": "M6",
+    "lat": 53.485368,
+    "lng": -2.292469,
+    "summary": "🟢 Reservoir Street, Salford M6 (M6): Low crime - 2 incidents within 1.0km radius (near On or near Anchorage Quay, On or near Carolina Way), mainly Violent Crime (falling trend)",
+    "aggregate": {
+      "total": 2,
+      "by_category": {
+        "violent-crime": 2
+      },
+      "top_streets": {
+        "On or near Anchorage Quay": 1,
+        "On or near Carolina Way": 1
+      },
+      "outcomes": {
+        "Under investigation": 2
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 1,
+        "2025-04": 0,
+        "2025-03": 1
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Cassidy Way, Eccles M30",
+    "postcode": "M30",
+    "lat": 53.487464,
+    "lng": -2.357603,
+    "summary": "🟢 Cassidy Way, Eccles M30 (M30): Low crime - 1 incidents within 1.0km radius (near On or near Claude Street), mainly Other Crime (falling trend)",
+    "aggregate": {
+      "total": 1,
+      "by_category": {
+        "other-crime": 1
+      },
+      "top_streets": {
+        "On or near Claude Street": 1
+      },
+      "outcomes": {
+        "Under investigation": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 1
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Ordsall Lane, Salford M5",
+    "postcode": "M5",
+    "lat": 53.477754,
+    "lng": -2.262086,
+    "summary": "🟡 Ordsall Lane, Salford M5 (M5): Moderate crime - 6 incidents within 1.0km radius (near On or near Wood Street, On or near Archie Street), mainly Violent Crime, Other Theft (falling trend)",
+    "aggregate": {
+      "total": 6,
+      "by_category": {
+        "violent-crime": 5,
+        "other-theft": 1
+      },
+      "top_streets": {
+        "On or near Wood Street": 3,
+        "On or near Archie Street": 1,
+        "On or near Left Bank": 1
+      },
+      "outcomes": {
+        "Under investigation": 3,
+        "Investigation complete; no suspect identified": 3
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 2,
+        "2025-05": 4,
+        "2025-04": 0,
+        "2025-03": 0
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Town Gate Drive, Manchester M41",
+    "postcode": "M41",
+    "lat": 53.448006,
+    "lng": -2.405167,
+    "summary": "🟢 Town Gate Drive, Manchester M41 (M41): Low crime - 1 incidents within 1.0km radius (near On or near Norfolk Gardens), mainly Other Crime (stable trend)",
+    "aggregate": {
+      "total": 1,
+      "by_category": {
+        "other-crime": 1
+      },
+      "top_streets": {
+        "On or near Norfolk Gardens": 1
+      },
+      "outcomes": {
+        "Under investigation": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 1,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 0
+      },
+      "trend": "stable"
+    }
+  },
+  {
+    "address": "Quick Edge Lane, Grotton, Saddleworth OL4",
+    "postcode": "OL4",
+    "lat": 53.53107,
+    "lng": -2.050453,
+    "summary": "🟢 Quick Edge Lane, Grotton, Saddleworth OL4 (OL4): Safe area - no crimes reported within 1.0km radius in past 6 months",
+    "aggregate": {
+      "total": 0,
+      "by_category": {},
+      "top_streets": {},
+      "outcomes": {},
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 0
+      },
+      "trend": "stable"
+    }
+  },
+  {
+    "address": "Holcombe Close, Kearsley, Bolton BL4",
+    "postcode": "BL4",
+    "lat": 53.5372,
+    "lng": -2.37632,
+    "summary": "🟢 Holcombe Close, Kearsley, Bolton BL4 (BL4): Safe area - no crimes reported within 1.0km radius in past 6 months",
+    "aggregate": {
+      "total": 0,
+      "by_category": {},
+      "top_streets": {},
+      "outcomes": {},
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 0
+      },
+      "trend": "stable"
+    }
+  },
+  {
+    "address": "Crusader Mill, 70 Chapeltown Street, Manchester, Greater Manchester M1",
+    "postcode": "M1",
+    "lat": 53.478719,
+    "lng": -2.225387,
+    "summary": "🟢 Crusader Mill, 70 Chapeltown Street, Manchester, Greater Manchester M1 (M1): Low crime - 5 incidents within 1.0km radius (near On or near Butler Lane, On or near Biscay Close), mainly Violent Crime (falling trend)",
+    "aggregate": {
+      "total": 5,
+      "by_category": {
+        "violent-crime": 5
+      },
+      "top_streets": {
+        "On or near Butler Lane": 1,
+        "On or near Biscay Close": 1,
+        "On or near Siam Street": 1
+      },
+      "outcomes": {
+        "Under investigation": 5
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 2,
+        "2025-05": 1,
+        "2025-04": 1,
+        "2025-03": 1
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Gorton Street, Manchester M30",
+    "postcode": "M30",
+    "lat": 53.480066,
+    "lng": -2.370018,
+    "summary": "🟢 Gorton Street, Manchester M30 (M30): Low crime - 1 incidents within 1.0km radius (near On or near Claude Street), mainly Other Crime (falling trend)",
+    "aggregate": {
+      "total": 1,
+      "by_category": {
+        "other-crime": 1
+      },
+      "top_streets": {
+        "On or near Claude Street": 1
+      },
+      "outcomes": {
+        "Under investigation": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 1
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Whitehurst Road, Heaton Mersey, Stockport SK4",
+    "postcode": "SK4",
+    "lat": 53.422119,
+    "lng": -2.203746,
+    "summary": "🟢 Whitehurst Road, Heaton Mersey, Stockport SK4 (SK4): Low crime - 2 incidents within 1.0km radius (near On or near Lodge Court, On or near Wilderswood Close), mainly Violent Crime (stable trend)",
+    "aggregate": {
+      "total": 2,
+      "by_category": {
+        "violent-crime": 2
+      },
+      "top_streets": {
+        "On or near Lodge Court": 1,
+        "On or near Wilderswood Close": 1
+      },
+      "outcomes": {
+        "Under investigation": 1,
+        "Unable to prosecute suspect": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 1,
+        "2025-05": 1,
+        "2025-04": 0,
+        "2025-03": 0
+      },
+      "trend": "stable"
+    }
+  },
+  {
+    "address": "Aspell Close, Manchester M24",
+    "postcode": "M24",
+    "lat": 53.550347,
+    "lng": -2.204636,
+    "summary": "🟢 Aspell Close, Manchester M24 (M24): Low crime - 2 incidents within 1.0km radius (near On or near Weavers Court), mainly Other Crime (falling trend)",
+    "aggregate": {
+      "total": 2,
+      "by_category": {
+        "other-crime": 2
+      },
+      "top_streets": {
+        "On or near Weavers Court": 2
+      },
+      "outcomes": {
+        "Under investigation": 2
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 2
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Ludlow Street, Wigan, Lancs WN6",
+    "postcode": "WN6",
+    "lat": 53.594212,
+    "lng": -2.673407,
+    "summary": "🟢 Ludlow Street, Wigan, Lancs WN6 (WN6): Low crime - 4 incidents within 1.0km radius (near On or near Almond Brook Road, On or near Mossy Lea Fold), mainly Vehicle Crime, Other Theft (falling trend)",
+    "aggregate": {
+      "total": 4,
+      "by_category": {
+        "vehicle-crime": 1,
+        "other-theft": 1,
+        "drugs": 1,
+        "possession-of-weapons": 1
+      },
+      "top_streets": {
+        "On or near Almond Brook Road": 2,
+        "On or near Mossy Lea Fold": 1,
+        "On or near Hesketh Drive": 1
+      },
+      "outcomes": {
+        "Unable to prosecute suspect": 2,
+        "Under investigation": 1,
+        "Local resolution": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 1,
+        "2025-05": 0,
+        "2025-04": 1,
+        "2025-03": 2
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Hope Carr Road, Leigh WN7",
+    "postcode": "WN7",
+    "lat": 53.488444,
+    "lng": -2.502158,
+    "summary": "🟢 Hope Carr Road, Leigh WN7 (WN7): Low crime - 2 incidents within 1.0km radius (near On or near Park/open Space), mainly Shoplifting (falling trend)",
+    "aggregate": {
+      "total": 2,
+      "by_category": {
+        "shoplifting": 2
+      },
+      "top_streets": {
+        "On or near Park/open Space": 2
+      },
+      "outcomes": {
+        "Awaiting court outcome": 1,
+        "Investigation complete; no suspect identified": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 2
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Southfield Avenue, Bury BL9",
+    "postcode": "BL9",
+    "lat": 53.613201,
+    "lng": -2.294687,
+    "summary": "🟢 Southfield Avenue, Bury BL9 (BL9): Low crime - 3 incidents within 1.0km radius (near On or near Arley Avenue, On or near Chester Street), mainly Violent Crime (falling trend)",
+    "aggregate": {
+      "total": 3,
+      "by_category": {
+        "violent-crime": 3
+      },
+      "top_streets": {
+        "On or near Arley Avenue": 1,
+        "On or near Chester Street": 1,
+        "On or near Sefton Street": 1
+      },
+      "outcomes": {
+        "Under investigation": 3
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 1,
+        "2025-05": 1,
+        "2025-04": 1,
+        "2025-03": 0
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Chapeltown Road, Bromley Cross BL7",
+    "postcode": "BL7",
+    "lat": 53.612751,
+    "lng": -2.412018,
+    "summary": "🟢 Chapeltown Road, Bromley Cross BL7 (BL7): Safe area - no crimes reported within 1.0km radius in past 6 months",
+    "aggregate": {
+      "total": 0,
+      "by_category": {},
+      "top_streets": {},
+      "outcomes": {},
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 0
+      },
+      "trend": "stable"
+    }
+  },
+  {
+    "address": "Parkfield Road, Great Lever BL3",
+    "postcode": "BL3",
+    "lat": 53.562908,
+    "lng": -2.421998,
+    "summary": "🟢 Parkfield Road, Great Lever BL3 (BL3): Low crime - 3 incidents within 1.0km radius (near On or near Lobelia Avenue, On or near Sandham Street), mainly Other Crime, Other Theft (falling trend)",
+    "aggregate": {
+      "total": 3,
+      "by_category": {
+        "other-crime": 1,
+        "other-theft": 1,
+        "violent-crime": 1
+      },
+      "top_streets": {
+        "On or near Lobelia Avenue": 1,
+        "On or near Sandham Street": 1,
+        "On or near Kingsland Road": 1
+      },
+      "outcomes": {
+        "Under investigation": 2,
+        "Unable to prosecute suspect": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 1,
+        "2025-04": 1,
+        "2025-03": 1
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Broadoaks Road, Sale M33",
+    "postcode": "M33",
+    "lat": 53.42228,
+    "lng": -2.326465,
+    "summary": "🟢 Broadoaks Road, Sale M33 (M33): Low crime - 1 incidents within 1.0km radius (near On or near Hulme Road), mainly Violent Crime (falling trend)",
+    "aggregate": {
+      "total": 1,
+      "by_category": {
+        "violent-crime": 1
+      },
+      "top_streets": {
+        "On or near Hulme Road": 1
+      },
+      "outcomes": {
+        "Under investigation": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 1
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Gregory Avenue, Breightmet BL2",
+    "postcode": "BL2",
+    "lat": 53.581982,
+    "lng": -2.391178,
+    "summary": "🟢 Gregory Avenue, Breightmet BL2 (BL2): Low crime - 2 incidents within 1.0km radius (near On or near Huntroyde Avenue, On or near Mafeking Road), mainly Violent Crime, Other Crime (falling trend)",
+    "aggregate": {
+      "total": 2,
+      "by_category": {
+        "violent-crime": 1,
+        "other-crime": 1
+      },
+      "top_streets": {
+        "On or near Huntroyde Avenue": 1,
+        "On or near Mafeking Road": 1
+      },
+      "outcomes": {
+        "Under investigation": 2
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 2
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Fusion 1, Salford, Greater Manchester M5",
+    "postcode": "M5",
+    "lat": 53.478917,
+    "lng": -2.265355,
+    "summary": "🟡 Fusion 1, Salford, Greater Manchester M5 (M5): Moderate crime - 7 incidents within 1.0km radius (near On or near Wood Street, On or near Archie Street), mainly Violent Crime, Other Theft (falling trend)",
+    "aggregate": {
+      "total": 7,
+      "by_category": {
+        "violent-crime": 6,
+        "other-theft": 1
+      },
+      "top_streets": {
+        "On or near Wood Street": 3,
+        "On or near Archie Street": 1,
+        "On or near Elton's Yard": 1
+      },
+      "outcomes": {
+        "Under investigation": 4,
+        "Investigation complete; no suspect identified": 3
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 2,
+        "2025-05": 5,
+        "2025-04": 0,
+        "2025-03": 0
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Campbell Road, Swinton M27",
+    "postcode": "M27",
+    "lat": 53.504055,
+    "lng": -2.344012,
+    "summary": "🟢 Campbell Road, Swinton M27 (M27): Safe area - no crimes reported within 1.0km radius in past 6 months",
+    "aggregate": {
+      "total": 0,
+      "by_category": {},
+      "top_streets": {},
+      "outcomes": {},
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 0
+      },
+      "trend": "stable"
+    }
+  },
+  {
+    "address": "Clough Avenue, Sale M33",
+    "postcode": "M33",
+    "lat": 53.408283,
+    "lng": -2.346214,
+    "summary": "🟢 Clough Avenue, Sale M33 (M33): Low crime - 1 incidents within 1.0km radius (near On or near St George's Crescent), mainly Public Order (falling trend)",
+    "aggregate": {
+      "total": 1,
+      "by_category": {
+        "public-order": 1
+      },
+      "top_streets": {
+        "On or near St George's Crescent": 1
+      },
+      "outcomes": {
+        "Unable to prosecute suspect": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 1
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Brookside Road, Standish WN1",
+    "postcode": "WN1",
+    "lat": 53.587079,
+    "lng": -2.640175,
+    "summary": "🟢 Brookside Road, Standish WN1 (WN1): Safe area - no crimes reported within 1.0km radius in past 6 months",
+    "aggregate": {
+      "total": 0,
+      "by_category": {},
+      "top_streets": {},
+      "outcomes": {},
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 0
+      },
+      "trend": "stable"
+    }
+  },
+  {
+    "address": "Bowness Road, Middleton, Manchester M24",
+    "postcode": "M24",
+    "lat": 53.55473,
+    "lng": -2.216356,
+    "summary": "🟢 Bowness Road, Middleton, Manchester M24 (M24): Low crime - 2 incidents within 1.0km radius (near On or near Weavers Court), mainly Other Crime (falling trend)",
+    "aggregate": {
+      "total": 2,
+      "by_category": {
+        "other-crime": 2
+      },
+      "top_streets": {
+        "On or near Weavers Court": 2
+      },
+      "outcomes": {
+        "Under investigation": 2
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 2
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Buller Mews, Bury, Greater Manchester BL8",
+    "postcode": "BL8",
+    "lat": 53.586104,
+    "lng": -2.321005,
+    "summary": "🟢 Buller Mews, Bury, Greater Manchester BL8 (BL8): Low crime - 1 incidents within 1.0km radius (near On or near Central Avenue), mainly Violent Crime (stable trend)",
+    "aggregate": {
+      "total": 1,
+      "by_category": {
+        "violent-crime": 1
+      },
+      "top_streets": {
+        "On or near Central Avenue": 1
+      },
+      "outcomes": {
+        "Under investigation": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 1,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 0
+      },
+      "trend": "stable"
+    }
+  },
+  {
+    "address": "Hawksley Street, Horwich, Bolton, Greater Manchester BL6",
+    "postcode": "BL6",
+    "lat": 53.591228,
+    "lng": -2.536616,
+    "summary": "🟢 Hawksley Street, Horwich, Bolton, Greater Manchester BL6 (BL6): Low crime - 2 incidents within 1.0km radius (near On or near Arkwright Street, On or near Napier Drive), mainly Violent Crime, Other Crime (stable trend)",
+    "aggregate": {
+      "total": 2,
+      "by_category": {
+        "violent-crime": 1,
+        "other-crime": 1
+      },
+      "top_streets": {
+        "On or near Arkwright Street": 1,
+        "On or near Napier Drive": 1
+      },
+      "outcomes": {
+        "Under investigation": 2
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 1,
+        "2025-05": 0,
+        "2025-04": 1,
+        "2025-03": 0
+      },
+      "trend": "stable"
+    }
+  },
+  {
+    "address": "Meadowside Road, Hindley Green WN2",
+    "postcode": "WN2",
+    "lat": 53.530668,
+    "lng": -2.559685,
+    "summary": "🟢 Meadowside Road, Hindley Green WN2 (WN2): Low crime - 1 incidents within 1.0km radius (near On or near Lancaster Road), mainly Violent Crime (falling trend)",
+    "aggregate": {
+      "total": 1,
+      "by_category": {
+        "violent-crime": 1
+      },
+      "top_streets": {
+        "On or near Lancaster Road": 1
+      },
+      "outcomes": {
+        "Unable to prosecute suspect": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 1
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "St Georges Island, Kelso Place, Castlefield M15",
+    "postcode": "M15",
+    "lat": 53.472768,
+    "lng": -2.26367,
+    "summary": "🟡 St Georges Island, Kelso Place, Castlefield M15 (M15): Moderate crime - 8 incidents within 1.0km radius (near On or near Wood Street, On or near Ormsgill Street), mainly Violent Crime, Criminal Damage Arson (falling trend)",
+    "aggregate": {
+      "total": 8,
+      "by_category": {
+        "violent-crime": 6,
+        "criminal-damage-arson": 1,
+        "other-theft": 1
+      },
+      "top_streets": {
+        "On or near Wood Street": 3,
+        "On or near Ormsgill Street": 1,
+        "On or near Archie Street": 1
+      },
+      "outcomes": {
+        "Investigation complete; no suspect identified": 4,
+        "Under investigation": 3,
+        "Unable to prosecute suspect": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 3,
+        "2025-05": 4,
+        "2025-04": 1,
+        "2025-03": 0
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "June Avenue, Leigh WN7",
+    "postcode": "WN7",
+    "lat": 53.503743,
+    "lng": -2.537076,
+    "summary": "🟢 June Avenue, Leigh WN7 (WN7): Low crime - 3 incidents within 1.0km radius (near On or near Oxford Street, On or near Buchanan Street), mainly Violent Crime (falling trend)",
+    "aggregate": {
+      "total": 3,
+      "by_category": {
+        "violent-crime": 3
+      },
+      "top_streets": {
+        "On or near Oxford Street": 1,
+        "On or near Buchanan Street": 1,
+        "On or near Rushton Avenue": 1
+      },
+      "outcomes": {
+        "Under investigation": 3
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 1,
+        "2025-05": 2,
+        "2025-04": 0,
+        "2025-03": 0
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Queenhill Drive, Hyde SK14",
+    "postcode": "SK14",
+    "lat": 53.4632,
+    "lng": -2.06188,
+    "summary": "🟢 Queenhill Drive, Hyde SK14 (SK14): Low crime - 2 incidents within 1.0km radius (near On or near Mottram Road, On or near Lodge Lane), mainly Other Theft, Public Order (falling trend)",
+    "aggregate": {
+      "total": 2,
+      "by_category": {
+        "other-theft": 1,
+        "public-order": 1
+      },
+      "top_streets": {
+        "On or near Mottram Road": 1,
+        "On or near Lodge Lane": 1
+      },
+      "outcomes": {
+        "Under investigation": 1,
+        "Awaiting court outcome": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 1,
+        "2025-03": 1
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Meadowside, Newtown, Disley, Stockport SK12",
+    "postcode": "SK12",
+    "lat": 53.35888,
+    "lng": -2.01156,
+    "summary": "🔴 Meadowside, Newtown, Disley, Stockport SK12 (SK12): High crime area - 127 incidents within 1.0km radius (near On or near Rock Mill Lane, On or near St Albans Street), mainly Violent Crime, Anti Social Behaviour (falling trend)",
+    "aggregate": {
+      "total": 127,
+      "by_category": {
+        "violent-crime": 58,
+        "anti-social-behaviour": 23,
+        "public-order": 16,
+        "shoplifting": 8,
+        "criminal-damage-arson": 6,
+        "vehicle-crime": 4,
+        "other-theft": 4,
+        "burglary": 2,
+        "drugs": 2,
+        "other-crime": 2,
+        "theft-from-the-person": 1,
+        "bicycle-theft": 1
+      },
+      "top_streets": {
+        "On or near Rock Mill Lane": 10,
+        "On or near St Albans Street": 9,
+        "On or near Cross Street": 7
+      },
+      "outcomes": {
+        "Under investigation": 35,
+        "Investigation complete; no suspect identified": 29,
+        "Unable to prosecute suspect": 27,
+        "Not provided": 23,
+        "Local resolution": 8,
+        "Awaiting court outcome": 3,
+        "Action to be taken by another organisation": 2
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 26,
+        "2025-05": 42,
+        "2025-04": 26,
+        "2025-03": 33
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Richmond Street, Ashton-Under-Lyne OL7",
+    "postcode": "OL7",
+    "lat": 53.494178,
+    "lng": -2.11108,
+    "summary": "🟢 Richmond Street, Ashton-Under-Lyne OL7 (OL7): Low crime - 2 incidents within 1.0km radius (near On or near Jowett's Walk, On or near Patterdale Avenue), mainly Violent Crime (falling trend)",
+    "aggregate": {
+      "total": 2,
+      "by_category": {
+        "violent-crime": 2
+      },
+      "top_streets": {
+        "On or near Jowett's Walk": 1,
+        "On or near Patterdale Avenue": 1
+      },
+      "outcomes": {
+        "Under investigation": 2
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 2,
+        "2025-03": 0
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Pear View, Manchester M34",
+    "postcode": "M34",
+    "lat": 53.478562,
+    "lng": -2.131486,
+    "summary": "🟢 Pear View, Manchester M34 (M34): Safe area - no crimes reported within 1.0km radius in past 6 months",
+    "aggregate": {
+      "total": 0,
+      "by_category": {},
+      "top_streets": {},
+      "outcomes": {},
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 0
+      },
+      "trend": "stable"
+    }
+  },
+  {
+    "address": "Edgeley Road, Edgeley, Stockport SK3",
+    "postcode": "SK3",
+    "lat": 53.400921,
+    "lng": -2.172907,
+    "summary": "🟢 Edgeley Road, Edgeley, Stockport SK3 (SK3): Low crime - 3 incidents within 1.0km radius (near On or near Spectrum Way, On or near Aberdeen Grove), mainly Violent Crime (rising trend)",
+    "aggregate": {
+      "total": 3,
+      "by_category": {
+        "violent-crime": 3
+      },
+      "top_streets": {
+        "On or near Spectrum Way": 2,
+        "On or near Aberdeen Grove": 1
+      },
+      "outcomes": {
+        "Under investigation": 2,
+        "Unable to prosecute suspect": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 2,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 1
+      },
+      "trend": "rising"
+    }
+  },
+  {
+    "address": "Arnside Close, Oldham OL2",
+    "postcode": "OL2",
+    "lat": 53.578438,
+    "lng": -2.083374,
+    "summary": "🟢 Arnside Close, Oldham OL2 (OL2): Safe area - no crimes reported within 1.0km radius in past 6 months",
+    "aggregate": {
+      "total": 0,
+      "by_category": {},
+      "top_streets": {},
+      "outcomes": {},
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 0
+      },
+      "trend": "stable"
+    }
+  },
+  {
+    "address": "Bold Street, Altrincham WA14",
+    "postcode": "WA14",
+    "lat": 53.380939,
+    "lng": -2.349337,
+    "summary": "🟢 Bold Street, Altrincham WA14 (WA14): Safe area - no crimes reported within 1.0km radius in past 6 months",
+    "aggregate": {
+      "total": 0,
+      "by_category": {},
+      "top_streets": {},
+      "outcomes": {},
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 0
+      },
+      "trend": "stable"
+    }
+  },
+  {
+    "address": "Orford Road, Prestwich M25",
+    "postcode": "M25",
+    "lat": 53.536236,
+    "lng": -2.280206,
+    "summary": "🟢 Orford Road, Prestwich M25 (M25): Low crime - 2 incidents within 1.0km radius (near On or near Parking Area, On or near Polefield Gardens), mainly Other Theft, Violent Crime (stable trend)",
+    "aggregate": {
+      "total": 2,
+      "by_category": {
+        "other-theft": 1,
+        "violent-crime": 1
+      },
+      "top_streets": {
+        "On or near Parking Area": 1,
+        "On or near Polefield Gardens": 1
+      },
+      "outcomes": {
+        "Under investigation": 1,
+        "Action to be taken by another organisation": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 1,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 1
+      },
+      "trend": "stable"
+    }
+  },
+  {
+    "address": "Devonshire Street South, Manchester, Greater Manchester M13",
+    "postcode": "M13",
+    "lat": 53.465709,
+    "lng": -2.217742,
+    "summary": "🟢 Devonshire Street South, Manchester, Greater Manchester M13 (M13): Low crime - 2 incidents within 1.0km radius (near On or near St Stephen's Close, On or near Sunny Bank Road), mainly Violent Crime (falling trend)",
+    "aggregate": {
+      "total": 2,
+      "by_category": {
+        "violent-crime": 2
+      },
+      "top_streets": {
+        "On or near St Stephen's Close": 1,
+        "On or near Sunny Bank Road": 1
+      },
+      "outcomes": {
+        "Unable to prosecute suspect": 1,
+        "Under investigation": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 1,
+        "2025-03": 1
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Magnalls Fold Close, Worsley, Manchester M28",
+    "postcode": "M28",
+    "lat": 53.516303,
+    "lng": -2.396219,
+    "summary": "🟢 Magnalls Fold Close, Worsley, Manchester M28 (M28): Safe area - no crimes reported within 1.0km radius in past 6 months",
+    "aggregate": {
+      "total": 0,
+      "by_category": {},
+      "top_streets": {},
+      "outcomes": {},
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 0
+      },
+      "trend": "stable"
+    }
+  },
+  {
+    "address": "Arncliffe Rise, Oldham OL4",
+    "postcode": "OL4",
+    "lat": 53.565231,
+    "lng": -2.060566,
+    "summary": "🟢 Arncliffe Rise, Oldham OL4 (OL4): Safe area - no crimes reported within 1.0km radius in past 6 months",
+    "aggregate": {
+      "total": 0,
+      "by_category": {},
+      "top_streets": {},
+      "outcomes": {},
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 0
+      },
+      "trend": "stable"
+    }
+  },
+  {
+    "address": "Chisacre Drive, Shevington WN6",
+    "postcode": "WN6",
+    "lat": 53.576316,
+    "lng": -2.712641,
+    "summary": "🔴 Chisacre Drive, Shevington WN6 (WN6): High crime area - 23 incidents within 1.0km radius (near On or near Parking Area, On or near Apple Hey), mainly Anti Social Behaviour, Violent Crime (falling trend)",
+    "aggregate": {
+      "total": 23,
+      "by_category": {
+        "anti-social-behaviour": 6,
+        "violent-crime": 6,
+        "burglary": 4,
+        "criminal-damage-arson": 3,
+        "other-theft": 2,
+        "bicycle-theft": 1,
+        "vehicle-crime": 1
+      },
+      "top_streets": {
+        "On or near Parking Area": 7,
+        "On or near Apple Hey": 6,
+        "On or near Bank Brow": 3
+      },
+      "outcomes": {
+        "Investigation complete; no suspect identified": 9,
+        "Not provided": 6,
+        "Under investigation": 5,
+        "Unable to prosecute suspect": 3
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 8,
+        "2025-05": 11,
+        "2025-04": 3,
+        "2025-03": 1
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Hatherleigh Walk, Bolton BL2",
+    "postcode": "BL2",
+    "lat": 53.572746,
+    "lng": -2.381768,
+    "summary": "🟢 Hatherleigh Walk, Bolton BL2 (BL2): Low crime - 1 incidents within 1.0km radius (near On or near Mafeking Road), mainly Other Crime (falling trend)",
+    "aggregate": {
+      "total": 1,
+      "by_category": {
+        "other-crime": 1
+      },
+      "top_streets": {
+        "On or near Mafeking Road": 1
+      },
+      "outcomes": {
+        "Under investigation": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 1
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Hough Street, Bolton, Lancashire BL3",
+    "postcode": "BL3",
+    "lat": 53.567243,
+    "lng": -2.465632,
+    "summary": "🟢 Hough Street, Bolton, Lancashire BL3 (BL3): Low crime - 4 incidents within 1.0km radius (near On or near Willis Street, On or near Back Nunnery Road), mainly Violent Crime, Other Theft (falling trend)",
+    "aggregate": {
+      "total": 4,
+      "by_category": {
+        "violent-crime": 3,
+        "other-theft": 1
+      },
+      "top_streets": {
+        "On or near Willis Street": 1,
+        "On or near Back Nunnery Road": 1,
+        "On or near Harbury Close": 1
+      },
+      "outcomes": {
+        "Under investigation": 3,
+        "Unable to prosecute suspect": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 1,
+        "2025-05": 1,
+        "2025-04": 1,
+        "2025-03": 1
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Poplar Street, Heaton Mersey, Stockport SK4",
+    "postcode": "SK4",
+    "lat": 53.414101,
+    "lng": -2.20483,
+    "summary": "🟢 Poplar Street, Heaton Mersey, Stockport SK4 (SK4): Low crime - 1 incidents within 1.0km radius (near On or near Lodge Court), mainly Violent Crime (stable trend)",
+    "aggregate": {
+      "total": 1,
+      "by_category": {
+        "violent-crime": 1
+      },
+      "top_streets": {
+        "On or near Lodge Court": 1
+      },
+      "outcomes": {
+        "Under investigation": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 1,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 0
+      },
+      "trend": "stable"
+    }
+  },
+  {
+    "address": "Hutchinson Way, Radcliffe, Manchester, Greater Manchester M26",
+    "postcode": "M26",
+    "lat": 53.558275,
+    "lng": -2.334758,
+    "summary": "🟢 Hutchinson Way, Radcliffe, Manchester, Greater Manchester M26 (M26): Low crime - 2 incidents within 1.0km radius (near On or near Parking Area, On or near Wilson Street), mainly Vehicle Crime, Violent Crime (stable trend)",
+    "aggregate": {
+      "total": 2,
+      "by_category": {
+        "vehicle-crime": 1,
+        "violent-crime": 1
+      },
+      "top_streets": {
+        "On or near Parking Area": 1,
+        "On or near Wilson Street": 1
+      },
+      "outcomes": {
+        "Under investigation": 2
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 2,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 0
+      },
+      "trend": "stable"
+    }
+  },
+  {
+    "address": "Dunstable Street, Levenshulme, Manchester M19",
+    "postcode": "M19",
+    "lat": 53.445847,
+    "lng": -2.188979,
+    "summary": "🟢 Dunstable Street, Levenshulme, Manchester M19 (M19): Low crime - 4 incidents within 1.0km radius (near On or near Stamford Road, On or near Wellington Road North), mainly Other Theft, Violent Crime (stable trend)",
+    "aggregate": {
+      "total": 4,
+      "by_category": {
+        "other-theft": 2,
+        "violent-crime": 2
+      },
+      "top_streets": {
+        "On or near Stamford Road": 2,
+        "On or near Wellington Road North": 1,
+        "On or near Sunny Bank Road": 1
+      },
+      "outcomes": {
+        "Under investigation": 4
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 2,
+        "2025-05": 1,
+        "2025-04": 0,
+        "2025-03": 1
+      },
+      "trend": "stable"
+    }
+  },
+  {
+    "address": "Hill Street, Radcliffe, Manchester, Greater Manchester M26",
+    "postcode": "M26",
+    "lat": 53.566395,
+    "lng": -2.334216,
+    "summary": "🟢 Hill Street, Radcliffe, Manchester, Greater Manchester M26 (M26): Low crime - 2 incidents within 1.0km radius (near On or near Parking Area, On or near Wilson Street), mainly Vehicle Crime, Violent Crime (stable trend)",
+    "aggregate": {
+      "total": 2,
+      "by_category": {
+        "vehicle-crime": 1,
+        "violent-crime": 1
+      },
+      "top_streets": {
+        "On or near Parking Area": 1,
+        "On or near Wilson Street": 1
+      },
+      "outcomes": {
+        "Under investigation": 2
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 2,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 0
+      },
+      "trend": "stable"
+    }
+  },
+  {
+    "address": "Shaftesbury Road, Stockport SK3",
+    "postcode": "SK3",
+    "lat": 53.397722,
+    "lng": -2.189617,
+    "summary": "🟢 Shaftesbury Road, Stockport SK3 (SK3): Low crime - 2 incidents within 1.0km radius (near On or near Spectrum Way), mainly Violent Crime (stable trend)",
+    "aggregate": {
+      "total": 2,
+      "by_category": {
+        "violent-crime": 2
+      },
+      "top_streets": {
+        "On or near Spectrum Way": 2
+      },
+      "outcomes": {
+        "Under investigation": 1,
+        "Unable to prosecute suspect": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 2,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 0
+      },
+      "trend": "stable"
+    }
+  },
+  {
+    "address": "Trent Way, Bolton, Lancashire BL4",
+    "postcode": "BL4",
+    "lat": 53.534626,
+    "lng": -2.368322,
+    "summary": "🟢 Trent Way, Bolton, Lancashire BL4 (BL4): Safe area - no crimes reported within 1.0km radius in past 6 months",
+    "aggregate": {
+      "total": 0,
+      "by_category": {},
+      "top_streets": {},
+      "outcomes": {},
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 0
+      },
+      "trend": "stable"
+    }
+  },
+  {
+    "address": "Tandlewood Park, Royton, Oldham, Greater Manchester OL2",
+    "postcode": "OL2",
+    "lat": 53.573407,
+    "lng": -2.137834,
+    "summary": "🟢 Tandlewood Park, Royton, Oldham, Greater Manchester OL2 (OL2): Low crime - 1 incidents within 1.0km radius (near On or near Chapel Street), mainly Other Theft (falling trend)",
+    "aggregate": {
+      "total": 1,
+      "by_category": {
+        "other-theft": 1
+      },
+      "top_streets": {
+        "On or near Chapel Street": 1
+      },
+      "outcomes": {
+        "Action to be taken by another organisation": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 1
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Leech Avenue, Ashton-Under-Lyne OL6",
+    "postcode": "OL6",
+    "lat": 53.49887,
+    "lng": -2.072094,
+    "summary": "🟢 Leech Avenue, Ashton-Under-Lyne OL6 (OL6): Low crime - 1 incidents within 1.0km radius (near On or near Hospital), mainly Violent Crime (stable trend)",
+    "aggregate": {
+      "total": 1,
+      "by_category": {
+        "violent-crime": 1
+      },
+      "top_streets": {
+        "On or near Hospital": 1
+      },
+      "outcomes": {
+        "Under investigation": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 1,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 0
+      },
+      "trend": "stable"
+    }
+  },
+  {
+    "address": "Copperfields, Bolton BL6",
+    "postcode": "BL6",
+    "lat": 53.563232,
+    "lng": -2.501641,
+    "summary": "🟢 Copperfields, Bolton BL6 (BL6): Low crime - 1 incidents within 1.0km radius (near On or near Bristle Hall Way), mainly Possession Of Weapons (falling trend)",
+    "aggregate": {
+      "total": 1,
+      "by_category": {
+        "possession-of-weapons": 1
+      },
+      "top_streets": {
+        "On or near Bristle Hall Way": 1
+      },
+      "outcomes": {
+        "Under investigation": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 1,
+        "2025-03": 0
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Cedar Avenue, Stalybridge SK15",
+    "postcode": "SK15",
+    "lat": 53.48986,
+    "lng": -2.040565,
+    "summary": "🟢 Cedar Avenue, Stalybridge SK15 (SK15): Low crime - 1 incidents within 1.0km radius (near On or near Oxford Street), mainly Violent Crime (falling trend)",
+    "aggregate": {
+      "total": 1,
+      "by_category": {
+        "violent-crime": 1
+      },
+      "top_streets": {
+        "On or near Oxford Street": 1
+      },
+      "outcomes": {
+        "Under investigation": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 1,
+        "2025-03": 0
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Woodlands Drive, Atherton, Manchester M46",
+    "postcode": "M46",
+    "lat": 53.533798,
+    "lng": -2.474272,
+    "summary": "🟢 Woodlands Drive, Atherton, Manchester M46 (M46): Low crime - 1 incidents within 1.0km radius (near On or near Hesketh Street), mainly Violent Crime (stable trend)",
+    "aggregate": {
+      "total": 1,
+      "by_category": {
+        "violent-crime": 1
+      },
+      "top_streets": {
+        "On or near Hesketh Street": 1
+      },
+      "outcomes": {
+        "Under investigation": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 1,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 0
+      },
+      "trend": "stable"
+    }
+  },
+  {
+    "address": "Oldham Street, Manchester M4",
+    "postcode": "M4",
+    "lat": 53.484292,
+    "lng": -2.233582,
+    "summary": "🟡 Oldham Street, Manchester M4 (M4): Moderate crime - 10 incidents within 1.0km radius (near On or near Wood Street, On or near Southall Street), mainly Violent Crime, Other Theft (falling trend)",
+    "aggregate": {
+      "total": 10,
+      "by_category": {
+        "violent-crime": 8,
+        "other-theft": 1,
+        "theft-from-the-person": 1
+      },
+      "top_streets": {
+        "On or near Wood Street": 3,
+        "On or near Southall Street": 1,
+        "On or near Butler Lane": 1
+      },
+      "outcomes": {
+        "Under investigation": 7,
+        "Investigation complete; no suspect identified": 3
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 3,
+        "2025-05": 3,
+        "2025-04": 2,
+        "2025-03": 2
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Royds Street, Tottington, Bury BL8",
+    "postcode": "BL8",
+    "lat": 53.615593,
+    "lng": -2.339661,
+    "summary": "🟢 Royds Street, Tottington, Bury BL8 (BL8): Safe area - no crimes reported within 1.0km radius in past 6 months",
+    "aggregate": {
+      "total": 0,
+      "by_category": {},
+      "top_streets": {},
+      "outcomes": {},
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 0
+      },
+      "trend": "stable"
+    }
+  },
+  {
+    "address": "Briar Close, Ashton-In-Makerfield WN4",
+    "postcode": "WN4",
+    "lat": 53.490789,
+    "lng": -2.646819,
+    "summary": "🔴 Briar Close, Ashton-In-Makerfield WN4 (WN4): High crime area - 38 incidents within 1.0km radius (near On or near Haydock Park Gardens, On or near Fernlea Grove), mainly Violent Crime, Vehicle Crime (falling trend)",
+    "aggregate": {
+      "total": 38,
+      "by_category": {
+        "violent-crime": 10,
+        "vehicle-crime": 6,
+        "burglary": 4,
+        "criminal-damage-arson": 4,
+        "anti-social-behaviour": 4,
+        "other-theft": 3,
+        "public-order": 3,
+        "drugs": 2,
+        "theft-from-the-person": 1,
+        "shoplifting": 1
+      },
+      "top_streets": {
+        "On or near Haydock Park Gardens": 8,
+        "On or near Fernlea Grove": 4,
+        "On or near Chetwode Avenue": 3
+      },
+      "outcomes": {
+        "Investigation complete; no suspect identified": 17,
+        "Unable to prosecute suspect": 7,
+        "Under investigation": 6,
+        "Not provided": 4,
+        "Awaiting court outcome": 2,
+        "Further investigation is not in the public interest": 1,
+        "Local resolution": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 6,
+        "2025-05": 11,
+        "2025-04": 11,
+        "2025-03": 10
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Linden Avenue, Sale M33",
+    "postcode": "M33",
+    "lat": 53.421066,
+    "lng": -2.333031,
+    "summary": "🟢 Linden Avenue, Sale M33 (M33): Safe area - no crimes reported within 1.0km radius in past 6 months",
+    "aggregate": {
+      "total": 0,
+      "by_category": {},
+      "top_streets": {},
+      "outcomes": {},
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 0
+      },
+      "trend": "stable"
+    }
+  },
+  {
+    "address": "Oakhill Drive, Skelmersdale WN8",
+    "postcode": "WN8",
+    "lat": 53.5550559543568,
+    "lng": -2.76918163900415,
+    "summary": "🔴 Oakhill Drive, Skelmersdale WN8 (WN8): High crime area - 824 incidents within 1.0km radius (near On or near Shopping Area, On or near Banksbarn), mainly Violent Crime, Anti Social Behaviour (falling trend)",
+    "aggregate": {
+      "total": 824,
+      "by_category": {
+        "violent-crime": 284,
+        "anti-social-behaviour": 244,
+        "criminal-damage-arson": 72,
+        "shoplifting": 40,
+        "public-order": 37,
+        "burglary": 33,
+        "other-theft": 29,
+        "vehicle-crime": 25,
+        "drugs": 20,
+        "other-crime": 19,
+        "robbery": 8,
+        "possession-of-weapons": 7,
+        "bicycle-theft": 5,
+        "theft-from-the-person": 1
+      },
+      "top_streets": {
+        "On or near Shopping Area": 36,
+        "On or near Banksbarn": 35,
+        "On or near Enstone": 32
+      },
+      "outcomes": {
+        "Not provided": 244,
+        "Unable to prosecute suspect": 208,
+        "Under investigation": 155,
+        "Investigation complete; no suspect identified": 125,
+        "Awaiting court outcome": 33,
+        "Local resolution": 32,
+        "Offender given a caution": 8,
+        "Action to be taken by another organisation": 8,
+        "Offender given penalty notice": 4,
+        "Further investigation is not in the public interest": 4,
+        "Further action is not in the public interest": 3
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 216,
+        "2025-05": 224,
+        "2025-04": 217,
+        "2025-03": 167
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Chatham Road, Old Trafford M16",
+    "postcode": "M16",
+    "lat": 53.452831,
+    "lng": -2.271751,
+    "summary": "🟢 Chatham Road, Old Trafford M16 (M16): Low crime - 1 incidents within 1.0km radius (near On or near Mayfield Road), mainly Violent Crime (falling trend)",
+    "aggregate": {
+      "total": 1,
+      "by_category": {
+        "violent-crime": 1
+      },
+      "top_streets": {
+        "On or near Mayfield Road": 1
+      },
+      "outcomes": {
+        "Unable to prosecute suspect": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 1,
+        "2025-04": 0,
+        "2025-03": 0
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Worsley Road, Eccles, Manchester M30",
+    "postcode": "M30",
+    "lat": 53.48793,
+    "lng": -2.366943,
+    "summary": "🟢 Worsley Road, Eccles, Manchester M30 (M30): Low crime - 1 incidents within 1.0km radius (near On or near Claude Street), mainly Other Crime (falling trend)",
+    "aggregate": {
+      "total": 1,
+      "by_category": {
+        "other-crime": 1
+      },
+      "top_streets": {
+        "On or near Claude Street": 1
+      },
+      "outcomes": {
+        "Under investigation": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 1
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Beaconsfield Road, Altrincham WA14",
+    "postcode": "WA14",
+    "lat": 53.399648,
+    "lng": -2.351227,
+    "summary": "🟢 Beaconsfield Road, Altrincham WA14 (WA14): Safe area - no crimes reported within 1.0km radius in past 6 months",
+    "aggregate": {
+      "total": 0,
+      "by_category": {},
+      "top_streets": {},
+      "outcomes": {},
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 0
+      },
+      "trend": "stable"
+    }
+  },
+  {
+    "address": "Stockport Road, Timperley, Altrincham WA15",
+    "postcode": "WA15",
+    "lat": 53.394013,
+    "lng": -2.325214,
+    "summary": "🟢 Stockport Road, Timperley, Altrincham WA15 (WA15): Low crime - 2 incidents within 1.0km radius (near On or near Maple Road West, On or near St George's Crescent), mainly Violent Crime, Public Order (stable trend)",
+    "aggregate": {
+      "total": 2,
+      "by_category": {
+        "violent-crime": 1,
+        "public-order": 1
+      },
+      "top_streets": {
+        "On or near Maple Road West": 1,
+        "On or near St George's Crescent": 1
+      },
+      "outcomes": {
+        "Under investigation": 1,
+        "Unable to prosecute suspect": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 1,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 1
+      },
+      "trend": "stable"
+    }
+  },
+  {
+    "address": "Rivington Drive, Upholland WN8",
+    "postcode": "WN8",
+    "lat": 53.542984,
+    "lng": -2.725377,
+    "summary": "🔴 Rivington Drive, Upholland WN8 (WN8): High crime area - 144 incidents within 1.0km radius (near On or near Danbers, On or near Stoney Brow), mainly Violent Crime, Anti Social Behaviour (falling trend)",
+    "aggregate": {
+      "total": 144,
+      "by_category": {
+        "violent-crime": 56,
+        "anti-social-behaviour": 45,
+        "vehicle-crime": 14,
+        "other-theft": 8,
+        "criminal-damage-arson": 7,
+        "burglary": 4,
+        "drugs": 3,
+        "public-order": 3,
+        "robbery": 1,
+        "possession-of-weapons": 1,
+        "shoplifting": 1,
+        "other-crime": 1
+      },
+      "top_streets": {
+        "On or near Danbers": 10,
+        "On or near Stoney Brow": 7,
+        "On or near Windsor Road": 7
+      },
+      "outcomes": {
+        "Unable to prosecute suspect": 48,
+        "Not provided": 45,
+        "Investigation complete; no suspect identified": 21,
+        "Under investigation": 21,
+        "Awaiting court outcome": 7,
+        "Local resolution": 2
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 35,
+        "2025-05": 42,
+        "2025-04": 35,
+        "2025-03": 32
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "James Street, Dearnley, Littleborough OL15",
+    "postcode": "OL15",
+    "lat": 53.640289,
+    "lng": -2.11487,
+    "summary": "🟢 James Street, Dearnley, Littleborough OL15 (OL15): Low crime - 2 incidents within 1.0km radius (near On or near St Andrews Close, On or near Homestead Gardens), mainly Other Crime (falling trend)",
+    "aggregate": {
+      "total": 2,
+      "by_category": {
+        "other-crime": 2
+      },
+      "top_streets": {
+        "On or near St Andrews Close": 1,
+        "On or near Homestead Gardens": 1
+      },
+      "outcomes": {
+        "Under investigation": 2
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 1,
+        "2025-03": 1
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Avondale Road, Whitefield M45",
+    "postcode": "M45",
+    "lat": 53.5509,
+    "lng": -2.300694,
+    "summary": "🟢 Avondale Road, Whitefield M45 (M45): Low crime - 1 incidents within 1.0km radius (near On or near Parking Area), mainly Vehicle Crime (stable trend)",
+    "aggregate": {
+      "total": 1,
+      "by_category": {
+        "vehicle-crime": 1
+      },
+      "top_streets": {
+        "On or near Parking Area": 1
+      },
+      "outcomes": {
+        "Under investigation": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 1,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 0
+      },
+      "trend": "stable"
+    }
+  },
+  {
+    "address": "Priory Place, Bolton BL2",
+    "postcode": "BL2",
+    "lat": 53.590783,
+    "lng": -2.408797,
+    "summary": "🟢 Priory Place, Bolton BL2 (BL2): Low crime - 1 incidents within 1.0km radius (near On or near Huntroyde Avenue), mainly Violent Crime (falling trend)",
+    "aggregate": {
+      "total": 1,
+      "by_category": {
+        "violent-crime": 1
+      },
+      "top_streets": {
+        "On or near Huntroyde Avenue": 1
+      },
+      "outcomes": {
+        "Under investigation": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 1
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Alfred Street, Eccles, Manchester, Greater Manchester M30",
+    "postcode": "M30",
+    "lat": 53.491331,
+    "lng": -2.35383,
+    "summary": "🟢 Alfred Street, Eccles, Manchester, Greater Manchester M30 (M30): Low crime - 1 incidents within 1.0km radius (near On or near Claude Street), mainly Other Crime (falling trend)",
+    "aggregate": {
+      "total": 1,
+      "by_category": {
+        "other-crime": 1
+      },
+      "top_streets": {
+        "On or near Claude Street": 1
+      },
+      "outcomes": {
+        "Under investigation": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 1
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Norbury Place, Stockport SK7",
+    "postcode": "SK7",
+    "lat": 53.368855,
+    "lng": -2.136561,
+    "summary": "🟢 Norbury Place, Stockport SK7 (SK7): Low crime - 3 incidents within 1.0km radius (near On or near Macclesfield Road), mainly Drugs, Public Order (rising trend)",
+    "aggregate": {
+      "total": 3,
+      "by_category": {
+        "drugs": 1,
+        "public-order": 1,
+        "violent-crime": 1
+      },
+      "top_streets": {
+        "On or near Macclesfield Road": 3
+      },
+      "outcomes": {
+        "Under investigation": 3
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 2,
+        "2025-05": 1,
+        "2025-04": 0,
+        "2025-03": 0
+      },
+      "trend": "rising"
+    }
+  },
+  {
+    "address": "Laurels Drive, Smithy Bridge OL15",
+    "postcode": "OL15",
+    "lat": 53.63219,
+    "lng": -2.109313,
+    "summary": "🟢 Laurels Drive, Smithy Bridge OL15 (OL15): Low crime - 2 incidents within 1.0km radius (near On or near St Andrews Close, On or near Homestead Gardens), mainly Other Crime (falling trend)",
+    "aggregate": {
+      "total": 2,
+      "by_category": {
+        "other-crime": 2
+      },
+      "top_streets": {
+        "On or near St Andrews Close": 1,
+        "On or near Homestead Gardens": 1
+      },
+      "outcomes": {
+        "Under investigation": 2
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 1,
+        "2025-03": 1
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Mabs Court, Ashton-Under-Lyne OL6",
+    "postcode": "OL6",
+    "lat": 53.485622,
+    "lng": -2.083697,
+    "summary": "🟢 Mabs Court, Ashton-Under-Lyne OL6 (OL6): Low crime - 3 incidents within 1.0km radius (near On or near Hospital, On or near Jowett's Walk), mainly Violent Crime, Public Order (falling trend)",
+    "aggregate": {
+      "total": 3,
+      "by_category": {
+        "violent-crime": 2,
+        "public-order": 1
+      },
+      "top_streets": {
+        "On or near Hospital": 1,
+        "On or near Jowett's Walk": 1,
+        "On or near Lodge Lane": 1
+      },
+      "outcomes": {
+        "Under investigation": 2,
+        "Awaiting court outcome": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 1,
+        "2025-05": 0,
+        "2025-04": 1,
+        "2025-03": 1
+      },
+      "trend": "falling"
+    }
+  },
+  {
+    "address": "Belvedere Avenue, Reddish, Stockport SK5",
+    "postcode": "SK5",
+    "lat": 53.449432,
+    "lng": -2.152521,
+    "summary": "🟢 Belvedere Avenue, Reddish, Stockport SK5 (SK5): Safe area - no crimes reported within 1.0km radius in past 6 months",
+    "aggregate": {
+      "total": 0,
+      "by_category": {},
+      "top_streets": {},
+      "outcomes": {},
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 0
+      },
+      "trend": "stable"
+    }
+  },
+  {
+    "address": "Seaford Road, Harwood BL2",
+    "postcode": "BL2",
+    "lat": 53.608446,
+    "lng": -2.391985,
+    "summary": "🟢 Seaford Road, Harwood BL2 (BL2): Safe area - no crimes reported within 1.0km radius in past 6 months",
+    "aggregate": {
+      "total": 0,
+      "by_category": {},
+      "top_streets": {},
+      "outcomes": {},
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 0
+      },
+      "trend": "stable"
+    }
+  },
+  {
+    "address": "Carwood Grove, Horwich BL6",
+    "postcode": "BL6",
+    "lat": 53.587818,
+    "lng": -2.532581,
+    "summary": "🟢 Carwood Grove, Horwich BL6 (BL6): Low crime - 2 incidents within 1.0km radius (near On or near Arkwright Street, On or near Napier Drive), mainly Violent Crime, Other Crime (stable trend)",
+    "aggregate": {
+      "total": 2,
+      "by_category": {
+        "violent-crime": 1,
+        "other-crime": 1
+      },
+      "top_streets": {
+        "On or near Arkwright Street": 1,
+        "On or near Napier Drive": 1
+      },
+      "outcomes": {
+        "Under investigation": 2
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 1,
+        "2025-05": 0,
+        "2025-04": 1,
+        "2025-03": 0
+      },
+      "trend": "stable"
+    }
+  },
+  {
+    "address": "Wolford Drive, Tyldesley, Manchester, Greater Manchester M29",
+    "postcode": "M29",
+    "lat": 53.515203,
+    "lng": -2.45281,
+    "summary": "🟢 Wolford Drive, Tyldesley, Manchester, Greater Manchester M29 (M29): Safe area - no crimes reported within 1.0km radius in past 6 months",
+    "aggregate": {
+      "total": 0,
+      "by_category": {},
+      "top_streets": {},
+      "outcomes": {},
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 0
+      },
+      "trend": "stable"
+    }
+  },
+  {
+    "address": "Claremont Avenue, West Timperley, Altrincham WA14",
+    "postcode": "WA14",
+    "lat": 53.40343,
+    "lng": -2.34713,
+    "summary": "🟢 Claremont Avenue, West Timperley, Altrincham WA14 (WA14): Low crime - 1 incidents within 1.0km radius (near On or near St George's Crescent), mainly Public Order (falling trend)",
+    "aggregate": {
+      "total": 1,
+      "by_category": {
+        "public-order": 1
+      },
+      "top_streets": {
+        "On or near St George's Crescent": 1
+      },
+      "outcomes": {
+        "Unable to prosecute suspect": 1
+      },
+      "monthly_counts": {
+        "2025-08": 0,
+        "2025-07": 0,
+        "2025-06": 0,
+        "2025-05": 0,
+        "2025-04": 0,
+        "2025-03": 1
+      },
+      "trend": "falling"
+    }
+  }
+]

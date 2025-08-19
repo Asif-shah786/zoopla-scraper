@@ -120,8 +120,8 @@ def load_and_clean_data(
 
     print("Step 4: Converting data types...")
 
-    # Convert numerical columns
-    numeric_cols = ["bathrooms", "bedrooms", "price", "receptions", "size_sqft"]
+    # Convert numerical columns (exclude price; we'll build price_int later)
+    numeric_cols = ["bathrooms", "bedrooms", "receptions", "size_sqft"]
     for col in numeric_cols:
         if col in df_cleaned.columns:
             df_cleaned[col] = pd.to_numeric(df_cleaned[col], errors="coerce")
@@ -158,11 +158,38 @@ def load_and_clean_data(
     if "receptions" in df_cleaned.columns:
         df_cleaned["receptions_int"] = df_cleaned["receptions"].astype("Int64")
     if "price" in df_cleaned.columns:
-        df_cleaned["price_num"] = df_cleaned["price"].astype("float64")
+        # Build integer-only price for downstream use and vector DB metadata filtering
+        df_cleaned["price_int"] = (
+            pd.to_numeric(df_cleaned["price"], errors="coerce").round(0).astype("Int64")
+        )
     if "size_sqft" in df_cleaned.columns:
         df_cleaned["size_sqft_num"] = df_cleaned["size_sqft"].astype("float64")
 
     print("✓ Numeric helper columns created")
+
+    # Keep only integer price; drop original and float helper if present
+    cols_to_drop = [c for c in ["price", "price_num"] if c in df_cleaned.columns]
+    if cols_to_drop:
+        df_cleaned = df_cleaned.drop(columns=cols_to_drop)
+
+    print("Step 6.5: Filtering out incomplete properties...")
+
+    # Filter out properties where essential fields are null
+    initial_count = len(df_cleaned)
+
+    # Remove properties with missing address, price_int, or description
+    df_cleaned = df_cleaned.dropna(subset=["address", "price_int", "description"])
+
+    filtered_count = len(df_cleaned)
+    removed_count = initial_count - filtered_count
+
+    if removed_count > 0:
+        print(
+            f"✓ Removed {removed_count} incomplete properties (missing address, price_int, or description)"
+        )
+        print(f"✓ Kept {filtered_count} complete properties")
+    else:
+        print("✓ All properties have complete essential data")
 
     print("Step 7: Saving cleaned data...")
 

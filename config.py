@@ -6,7 +6,7 @@ Modify these settings to customize the scraping behavior.
 """
 
 # ===== SCRAPING LIMITS =====
-MAX_PROPERTIES = 5
+MAX_PROPERTIES = 12000
 PAGES_TO_SCRAPE = "ALL"
 REQUEST_DELAY = 2  # Seconds to wait between property requests (be respectful!)
 

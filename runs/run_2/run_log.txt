@@ -1,0 +1,36 @@
+[00:37:32] INFO: 🚀 Starting Zoopla Scraper Engine - Run #2
+[00:37:32] INFO: 📁 Run directory: runs/run_2
+[00:37:32] INFO: ⏰ Start time: 2025-08-19 00:37:32
+[00:37:32] INFO: 🚀 Starting complete pipeline execution...
+[00:37:32] INFO: 🔄 Starting scraping...
+[00:37:32] INFO: 📡 Running scraper: zoopla_bulk_scraper.py
+[01:30:07] INFO: 📁 Scraped data saved to: runs/run_2/scraped_data.json
+[01:30:07] INFO: 📊 File size: 4549.4 KB
+[01:30:07] INFO: 📝 Scraper output: 🚀 Starting Zoopla Bulk Scraper
+📊 Configuration: 12000 properties max, ALL available pages, 2s delay
+🔄 Auto-detecting available pages...
+
+Fetching page 1...
+Status Code for page 1: 200
+Extracted 22 pro...
+[01:30:07] INFO: ✅ scraping completed successfully in 3155.3s
+[01:30:07] INFO: 🔄 Starting crime_data...
+[01:30:07] INFO: 🚔 Running crime data integration: uk_police_api.py
+[01:35:03] INFO: 🚔 Crime data saved to: runs/run_2/properties_with_crime.json (embedded for 98 properties)
+[01:35:03] INFO: 📊 File size: 4615.0 KB
+[01:35:03] INFO: ✅ crime_data completed successfully in 295.9s
+[01:35:03] INFO: 🔄 Starting preprocessing...
+[01:35:03] INFO: 🧹 Running data preprocessing: data_preprocessing.py
+[01:35:04] INFO: 🧹 Final cleaned data saved to: runs/run_2/run_ready.json
+[01:35:04] INFO: 📊 File size: 4408.3 KB
+[01:35:04] INFO: 📊 Dataset shape: (904, 28)
+[01:35:04] INFO: ✅ preprocessing completed successfully in 1.2s
+[01:35:04] INFO: 🎉 Pipeline completed successfully!
+[01:35:04] INFO: 📁 Final output file: runs/run_2/run_ready.json
+[01:35:04] INFO: 📊 Run Summary:
+[01:35:04] INFO:    Total duration: 3452.4s
+[01:35:04] INFO:    Overall status: completed
+[01:35:04] INFO:    ✅ scraping: 3155.3s
+[01:35:04] INFO:    ✅ crime_data: 295.9s
+[01:35:04] INFO:    ✅ preprocessing: 1.2s
+[01:35:04] INFO: 📁 Run summary saved to: runs/run_2/run_summary.json

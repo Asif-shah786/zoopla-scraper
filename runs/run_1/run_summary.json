@@ -1,0 +1,28 @@
+{
+  "run_number": 1,
+  "start_time": "2025-08-18T19:58:05.691751",
+  "end_time": "2025-08-18T20:08:55.357574",
+  "total_duration_seconds": 649.665823,
+  "run_directory": "runs/run_1",
+  "steps": {
+    "scraping": {
+      "status": "completed",
+      "start": "2025-08-18T19:58:05.692940",
+      "end": "2025-08-18T20:03:50.436823",
+      "error": null
+    },
+    "crime_data": {
+      "status": "completed",
+      "start": "2025-08-18T20:03:50.437311",
+      "end": "2025-08-18T20:08:54.579191",
+      "error": null
+    },
+    "preprocessing": {
+      "status": "completed",
+      "start": "2025-08-18T20:08:54.579816",
+      "end": "2025-08-18T20:08:55.356918",
+      "error": null
+    }
+  },
+  "overall_status": "completed"
+}
