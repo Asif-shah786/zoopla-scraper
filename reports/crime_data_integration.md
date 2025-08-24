@@ -1,4 +1,8 @@
-# Crime Data Integration Report for Zoopla Property RAG App
+# Crime Data Integration: System Enhancement for RAG Application
+
+## 📍 **Section Position: Implementation/Modelling (Section 5)**
+
+This crime data integration represents a **system enhancement** that builds upon the preprocessed data pipeline described in Section 4 (Data Understanding, Analysis & Preprocessing). While the preprocessing pipeline ensures data quality and consistency, this integration adds valuable contextual information that transforms the RAG application's capabilities.
 
 ## 🎯 **Why Crime Data Was Needed**
 
@@ -8,6 +12,19 @@ The Zoopla property scraper collects comprehensive property information, but **l
 - **Informed Decisions**: Property value and desirability are heavily influenced by crime rates
 - **Complete Picture**: Combines property details with area safety metrics
 - **Competitive Advantage**: RAG app can answer safety-related queries that basic property listings can't
+
+## 🔗 **Integration with Preprocessing Pipeline**
+
+### **Data Flow Architecture**
+1. **Preprocessing Output**: Clean, validated property data from Section 4
+2. **Enrichment Layer**: Crime data integration as an additional processing step
+3. **Enhanced Dataset**: Final output combining property and safety information
+4. **RAG System Input**: Enriched data ready for vector embedding and retrieval
+
+### **Quality Assurance Continuity**
+- Only properties that passed quality filtering receive crime data enrichment
+- Maintains the data integrity established in the preprocessing pipeline
+- Ensures consistent data structure across all enriched records
 
 ## 🛠️ **What We Implemented**
 
@@ -79,3 +96,22 @@ The crime data integration transforms the RAG app from a basic property informat
 **Update Frequency**: Monthly  
 **Coverage**: England & Wales  
 **Accuracy**: Location-specific with 1km precision
+
+## 🔄 **Cross-References to Other Sections**
+
+### **Section 4: Data Understanding, Analysis & Preprocessing**
+- References the quality filtering that ensures only complete properties receive crime data
+- Builds upon the cleaned coordinate data (lat/lng) for accurate crime location matching
+- Maintains the data structure consistency established in preprocessing
+
+### **Section 6: Critical Evaluation & Results Analysis**
+- Demonstrates how enhanced data improves RAG system query capabilities
+- Shows the value of external data integration in real estate applications
+- Provides metrics for system performance improvement
+
+### **Section 7: Conclusions**
+- Highlights the importance of data enrichment beyond basic cleaning
+- Shows how external API integration can significantly enhance application value
+- Demonstrates professional system design and implementation skills
+
+This integration showcases advanced system development capabilities and demonstrates how to enhance preprocessed data with external contextual information for improved user experience and system functionality.
